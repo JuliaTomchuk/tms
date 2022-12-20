@@ -11,7 +11,7 @@ public class LogListener implements HttpSessionListener {
     public void sessionCreated(HttpSessionEvent se) {
         String id = se.getSession().getId();
 
-        System.out.println("-------------------------"+"Session has been created"+ id +"-----------------------------------------");
+        System.out.println("-------------------------" + "Session has been created" + id + "-----------------------------------------");
     }
 
     @Override

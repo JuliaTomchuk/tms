@@ -5,25 +5,28 @@ import java.util.Objects;
 public class Car {
     private int id;
     private String name;
-    public Car(){}
-    public Car(int id, String name){
-        this.id = id;
-        this.name=name;
+
+    public Car() {
     }
 
-    public int getId() {
+    public Car(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public synchronized int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public synchronized void setId(int id) {
         this.id = id;
     }
 
-    public String getName() {
+    public synchronized String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public synchronized void setName(String name) {
         this.name = name;
     }
 
