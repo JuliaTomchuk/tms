@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 @WebServlet("/garage")
 public class CarServlet extends HttpServlet {
@@ -33,8 +34,8 @@ public class CarServlet extends HttpServlet {
 
         } else {
             int id = Integer.valueOf(req.getParameter("id"));
-            Car car = garage.getCar(id);
-            out.println(car.toString());
+            Optional<Car> car = garage.getCar(id);
+            out.println(car.get().toString());
 
         }
 
@@ -58,7 +59,7 @@ public class CarServlet extends HttpServlet {
     public void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");
         if (id != null && garage.getCars().containsKey(Integer.valueOf(id))) {
-            garage.getCars().remove(Integer.valueOf(id));
+            garage.deleteCar(Integer.valueOf(id));
             resp.sendRedirect("car.html");
         } else {
             resp.setStatus(400);
@@ -70,8 +71,11 @@ public class CarServlet extends HttpServlet {
     public void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
         String id = req.getParameter("id");
         String name = req.getParameter("name");
+        boolean isIdNull = (id == null);
+        boolean isNameNull = (name == null);
+        boolean containsKey = garage.getCars().containsKey(Integer.valueOf(id));
 
-        if (id != null && name != null && garage.getCars().containsKey(Integer.valueOf(id))) {
+        if ((!isIdNull) && (!isNameNull) && containsKey) {
             garage.getCars().replace(Integer.valueOf(id), new Car(Integer.valueOf(id), name));
         } else {
             resp.setStatus(400);

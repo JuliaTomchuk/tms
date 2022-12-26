@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class Garage {
     private Map<Integer, Car> cars;
@@ -25,14 +26,16 @@ public class Garage {
         }
     }
 
-    public synchronized Car getCar(int id) {
-        Car car = cars.get(id);
-        if (car != null) {
-            return car;
-        } else {
-            return new Car();
-        }
+    public synchronized Optional<Car> getCar(int id) {
+        Optional<Car> car = Optional.of(cars.get(id));
 
+        return car;
+
+
+    }
+
+    public synchronized void deleteCar(int id) {
+        cars.remove(id);
     }
 
     @Override
