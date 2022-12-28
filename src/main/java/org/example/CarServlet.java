@@ -35,7 +35,8 @@ public class CarServlet extends HttpServlet {
         } else {
             int id = Integer.valueOf(req.getParameter("id"));
             Optional<Car> car = garage.getCar(id);
-            out.println(car.get().toString());
+            Car resultCar = car.orElse(new Car());
+            out.println(resultCar.toString());
 
         }
 
