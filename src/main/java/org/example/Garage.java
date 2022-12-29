@@ -28,9 +28,8 @@ public class Garage {
     }
 
     public Optional<Car> getCar(int id) {
-        Optional<Car> car = Optional.ofNullable(cars.get(id));
 
-        return car;
+        return Optional.ofNullable(cars.get(id));
 
 
     }
