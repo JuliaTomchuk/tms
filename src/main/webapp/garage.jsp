@@ -35,6 +35,10 @@
                     <input type="number" class="form-control" id="floatingID" name="id">
                     <label for="floatingID">ID машины</label><br>
                 </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingColor" name="color">
+                    <label for="floatingColor">Цвет машины</label>
+                </div>
                 <button type="submit" class="btn btn-outline-primary">Подтвердить</button>
             </form>
 
@@ -61,19 +65,15 @@
                 <tr>
                     <th> ID</th>
                     <th> Car</th>
+                    <th>Color</th>
                     <th>Delete</th>
                 </tr>
                     <% Set<Integer> ids = cars.keySet();
         for(Integer id:ids){
             Car car= cars.get(id);
-            out.println("<tr>"+ "<td>"+car.getId()+"</td><td>"+car.getName()+"</td> <td><form ><button type=\"submit\" name = \"DelB\" value=\""+car.getId()+"\" class=\"btn btn-outline-primary\">Удалить</button></form></td></tr>");
+            out.println("<tr>"+ "<td>"+car.getId()+"</td><td>"+car.getName()+"</td><td>"+car.getColor()+"</td> <td><form action=\"\\delete\" method=\"post\"><input type=\"hidden\" name=\"carId\" value =\""+car.getId()+"\"><button type=\"submit\"  class=\"btn btn-outline-primary\">Удалить</button></form></td></tr>");
         }
-        String [] idCar= request.getParameterValues("DelB");
-                if(idCar!=null){
-                    cars.remove(Integer.valueOf(idCar[0]));
-                }
-
-    %>
+          %>
 
 
         </div>
@@ -83,17 +83,13 @@
     <div class="row">
         <div class="col-6">
             <h4>Удалите машину</h4>
-            <form  action="/garage">
+            <form action="/delete" method="post">
                 <div class="form-floating">
                     <input type="number" class="form-control" id="floatingDelete" name="idDel">
                     <label for="floatingDelete">Введите ID машины для удаления</label><br>
                 </div>
                 <button type="submit" class="btn btn-outline-primary">Подтвердить</button>
-                <% String id = request.getParameter("idDel");
-                    if (id != null && cars.containsKey(Integer.valueOf(id))) {
-                        cars.remove(Integer.valueOf(id));
-                    }
-                %>
+
             </form>
         </div>
     </div>
@@ -105,7 +101,7 @@
     <div class="row">
         <div class="col-6">
             <h4>Обновите машину</h4>
-            <form>
+            <form action="/update" method="post">
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="floatingInputUp" name="nameUp">
                     <label for="floatingInputUp">Название машины</label>
@@ -114,22 +110,17 @@
                     <input type="number" class="form-control" id="floatingIDUp" name="idUp">
                     <label for="floatingID">ID машины</label><br>
                 </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingColorUp" name="colorUp">
+                    <label for="floatingID">Цвет машины</label><br>
+                </div>
                 <button type="submit" class="btn btn-outline-primary">Подтвердить</button>
                 <br>
-                    <%
-                        String idUp=  request.getParameter("idUp");
-                        String nameUp =request.getParameter("nameUp");
-                        boolean isIdNull = (idUp == null);
-                        boolean isNameNull = (nameUp == null);
-                        if ((!isIdNull) && (!isNameNull) ) {
-                            cars.replace(Integer.valueOf(idUp), new Car(Integer.valueOf(idUp), nameUp));
-                        }
-                    %>
-        </div>
 
-        </form>
+
+            </form>
+        </div>
     </div>
-</div>
 </div>
 
 
