@@ -9,6 +9,9 @@ import java.io.IOException;
 
 @WebServlet("/update")
 public class UpdateServlet extends HttpServlet {
+
+    private CarService carService = new CarServiceImpl();
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String idUp = req.getParameter("idUp");
@@ -16,10 +19,9 @@ public class UpdateServlet extends HttpServlet {
         String colorUp = req.getParameter("colorUp");
         boolean isIdNull = (idUp == null);
         boolean isNameNull = (nameUp == null);
-        boolean containsKey = CarServlet.garage.getCars().containsKey(Integer.valueOf(idUp));
         boolean isColorNull = (colorUp == null);
-        if ((!isIdNull) && (!isNameNull) && containsKey && (!isColorNull)) {
-            CarServlet.garage.getCars().replace(Integer.valueOf(idUp), new Car(Integer.valueOf(idUp), nameUp, colorUp));
+        if ((!isIdNull) && (!isNameNull) && (!isColorNull)) {
+            carService.updateCar(new Car(Integer.valueOf(idUp), nameUp, colorUp));
         }
         resp.sendRedirect("garage");
     }
