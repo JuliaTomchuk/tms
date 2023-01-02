@@ -6,6 +6,7 @@ import java.util.List;
 
 public class CarServiceImpl implements CarService {
     private StartServlet startServlet = new StartServlet();
+    private Cash cash= new Cash();
 
     @Override
     public void saveCar(Car car) {
@@ -19,24 +20,32 @@ public class CarServiceImpl implements CarService {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        cash.add(car);
     }
 
     @Override
     public List<Car> getById(int id) {
-        Connection connection = startServlet.getConnection();
-        try {
-            PreparedStatement statement = connection.prepareStatement("SELECT * from cars where id_car=?");
-            statement.setInt(1, id);
-            ResultSet resultSet = statement.executeQuery();
-            List<Car> cars = get(resultSet);
-            return cars;
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+
+        List<Car> car = cash.getById(id);
+        if (car.isEmpty()) {
+            Connection connection = startServlet.getConnection();
+            try {
+                PreparedStatement statement = connection.prepareStatement("SELECT * from cars where id_car=?");
+                statement.setInt(1, id);
+                ResultSet resultSet = statement.executeQuery();
+                List<Car> cars = get(resultSet);
+                return cars;
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            return car;
         }
     }
 
     @Override
     public void delete(int id) {
+
         Connection connection = startServlet.getConnection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("DELETE from cars WHERE id_car=?");
@@ -45,21 +54,12 @@ public class CarServiceImpl implements CarService {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        cash.delete(id);
     }
 
     @Override
     public List<Car> getAll() {
-        Connection connection = startServlet.getConnection();
-        Statement statement = null;
-        try {
-            statement = connection.createStatement();
-            ResultSet resultSet = null;
-            resultSet = statement.executeQuery("SELECT * from cars");
-            return get(resultSet);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
+       return cash.getAll();
 
     }
 
@@ -74,6 +74,7 @@ public class CarServiceImpl implements CarService {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        cash.updateCar(car);
 
     }
 
