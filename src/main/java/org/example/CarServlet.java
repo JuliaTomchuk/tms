@@ -19,6 +19,7 @@ import java.util.Optional;
 public class CarServlet extends HttpServlet {
     private Garage garage = new Garage();
 
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         long timeLastRequest = System.currentTimeMillis();
@@ -28,17 +29,23 @@ public class CarServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ServletOutputStream out = resp.getOutputStream();
-        if (req.getParameter("id") == null) {
-            out.println(garage.toString());
+
+        if (req.getParameter("id") == null || req.getParameter("id").isBlank()) {
+            req.setAttribute("garage", garage);
+            req.getRequestDispatcher("/garage.jsp").forward(req, resp);
 
         } else {
             int id = Integer.valueOf(req.getParameter("id"));
             Optional<Car> car = garage.getCar(id);
-            Car resultCar = car.orElse(new Car());
-            out.println(resultCar.toString());
+            Car resultCar = car.orElseThrow();
+            Garage garage = new Garage();
+            garage.addCar(resultCar);
+            req.setAttribute("garage", garage);
+            req.getRequestDispatcher("/garage.jsp").forward(req, resp);
+
 
         }
+
 
     }
 
@@ -58,10 +65,10 @@ public class CarServlet extends HttpServlet {
 
     @Override
     public void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String id = req.getParameter("id");
+        String id = req.getParameter("idDel");
         if (id != null && garage.getCars().containsKey(Integer.valueOf(id))) {
             garage.deleteCar(Integer.valueOf(id));
-            resp.sendRedirect("car.html");
+
         } else {
             resp.setStatus(400);
         }
