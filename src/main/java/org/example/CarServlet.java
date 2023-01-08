@@ -17,7 +17,7 @@ import java.util.Optional;
 
 @WebServlet("/garage")
 public class CarServlet extends HttpServlet {
-    private Garage garage = new Garage();
+    public static Garage garage = new Garage();
 
 
     @Override
@@ -50,16 +50,17 @@ public class CarServlet extends HttpServlet {
     }
 
     @Override
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");
         String name = req.getParameter("name");
+        String color = req.getParameter("color");
         if (id != null && name != null) {
             resp.setStatus(201);
-            garage.addCar(new Car(Integer.valueOf(id), name));
+            garage.addCar(new Car(Integer.valueOf(id), name, color));
         } else {
             resp.setStatus(400);
         }
-
+        resp.sendRedirect("garage");
 
     }
 
@@ -79,12 +80,14 @@ public class CarServlet extends HttpServlet {
     public void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
         String id = req.getParameter("id");
         String name = req.getParameter("name");
+        String color = req.getParameter("color");
         boolean isIdNull = (id == null);
         boolean isNameNull = (name == null);
+        boolean isColorNull = (color == null);
         boolean containsKey = garage.getCars().containsKey(Integer.valueOf(id));
 
-        if ((!isIdNull) && (!isNameNull) && containsKey) {
-            garage.getCars().replace(Integer.valueOf(id), new Car(Integer.valueOf(id), name));
+        if ((!isIdNull) && (!isNameNull) && containsKey && (!isColorNull)) {
+            garage.getCars().replace(Integer.valueOf(id), new Car(Integer.valueOf(id), name, color));
         } else {
             resp.setStatus(400);
         }
