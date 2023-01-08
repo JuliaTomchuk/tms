@@ -14,19 +14,19 @@ public class Car {
         this.name = name;
     }
 
-    public synchronized int getId() {
+    public int getId() {
         return id;
     }
 
-    public synchronized void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public synchronized String getName() {
+    public String getName() {
         return name;
     }
 
-    public synchronized void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
