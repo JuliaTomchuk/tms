@@ -1,17 +1,30 @@
 package org.example;
 
 
+import lombok.ToString;
+
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
-
+@ToString
 public class Garage {
-    private Map<Integer, Car> cars;
+    private Map<Integer, Car> cars = new ConcurrentHashMap<>();
+    private static Garage garage;
 
-    public Garage() {
-        cars = new ConcurrentHashMap<>();
+    private Garage() {
+
     }
 
+    public static Garage getInstance() {
+        if (garage == null) {
+            synchronized (Garage.class) {
+                if (garage == null) {
+                    garage = new Garage();
+                }
+            }
+        }
+        return garage;
+    }
 
     public Map<Integer, Car> getCars() {
         return cars;
@@ -40,10 +53,5 @@ public class Garage {
     }
 
 
-    @Override
-    public String toString() {
-        return "Garage{" +
-                "cars=" + cars +
-                '}';
-    }
+
 }

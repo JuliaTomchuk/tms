@@ -58,9 +58,8 @@
 
             </form>
             <%
-                Garage garage = (Garage) request.getAttribute("garage");
-                Map<Integer, Car> cars = garage.getCars();
-            %>
+                Map<Integer, Car> cars = (Map) request.getAttribute("garage");
+                    %>
             <table class="table table-striped">
                 <tr>
                     <th> ID</th>
@@ -71,7 +70,7 @@
                     <% Set<Integer> ids = cars.keySet();
         for(Integer id:ids){
             Car car= cars.get(id);
-            out.println("<tr>"+ "<td>"+car.getId()+"</td><td>"+car.getName()+"</td><td>"+car.getColor()+"</td> <td><form action=\"\\delete\" method=\"post\"><input type=\"hidden\" name=\"carId\" value =\""+car.getId()+"\"><button type=\"submit\"  class=\"btn btn-outline-primary\">Удалить</button></form></td></tr>");
+            out.println("<tr>"+ "<td>"+car.getId()+"</td><td>"+car.getName()+"</td><td>"+car.getColor()+"</td> <td><form action=\"\\delete\" method=\"post\"><input type=\"hidden\" name=\"idDel\" value =\""+car.getId()+"\"><button type=\"submit\"  class=\"btn btn-outline-primary\">Удалить</button></form></td></tr>");
         }
           %>
 

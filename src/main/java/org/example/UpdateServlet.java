@@ -1,5 +1,8 @@
 package org.example;
 
+import com.sun.jdi.IntegerValue;
+import org.apache.commons.lang3.StringUtils;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,13 +17,14 @@ public class UpdateServlet extends HttpServlet {
         String idUp = req.getParameter("idUp");
         String nameUp = req.getParameter("nameUp");
         String colorUp = req.getParameter("colorUp");
-        boolean isIdNull = (idUp == null);
-        boolean isNameNull = (nameUp == null);
-        boolean containsKey = CarServlet.garage.getCars().containsKey(Integer.valueOf(idUp));
-        boolean isColorNull = (colorUp == null);
-        if ((!isIdNull) && (!isNameNull) && containsKey && (!isColorNull)) {
-            CarServlet.garage.getCars().replace(Integer.valueOf(idUp), new Car(Integer.valueOf(idUp), nameUp, colorUp));
+
+        if (!(StringUtils.isAnyBlank(idUp, nameUp, colorUp)) && containsKey(Integer.valueOf(idUp))) {
+            Garage.getInstance().getCars().replace(Integer.valueOf(idUp), new Car(Integer.valueOf(idUp), nameUp, colorUp));
         }
         resp.sendRedirect("garage");
+    }
+
+    private boolean containsKey(int id) {
+        return Garage.getInstance().getCars().containsKey(id);
     }
 }
