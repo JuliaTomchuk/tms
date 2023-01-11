@@ -1,5 +1,7 @@
 package org.example;
 
+import org.apache.commons.lang3.StringUtils;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,17 +11,15 @@ import java.io.IOException;
 
 @WebServlet("/delete")
 public class DeleteServlet extends HttpServlet {
-    private CarService carService = new CarServiceImpl();
+    private CarService carService = ServiceProvider.getInstance().getCarService();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String carId = req.getParameter("carId");
-        if (carId != null) {
+        if (StringUtils.isNotBlank(carId)) {
             carService.delete(Integer.valueOf(carId));
 
         }
-
-
         resp.sendRedirect("garage");
     }
 }
