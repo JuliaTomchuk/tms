@@ -1,22 +1,21 @@
 package org.example;
 
+import org.apache.commons.lang3.StringUtils;
+
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.time.LocalTime;
-import java.util.*;
+import java.util.List;
+
 
 @WebServlet("/garage")
 public class CarServlet extends HttpServlet {
 
-    private CarService carService = new CarServiceImpl();
+    private CarService carService = ServiceProvider.getInstance().getCarService();
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,16 +27,18 @@ public class CarServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        String id = req.getParameter("id");
 
-        if (req.getParameter("id") == null || req.getParameter("id").isBlank()) {
+
+        if (StringUtils.isBlank(id)) {
             List<Car> cars = carService.getAll();
             req.setAttribute("cars", cars);
             req.getRequestDispatcher("/garage.jsp").forward(req, resp);
 
         } else {
-            int id = Integer.valueOf(req.getParameter("id"));
-            List<Car> cars = carService.getById(id);
-            req.setAttribute("cars", cars);
+            int idInt = Integer.valueOf(id);
+            Car car = carService.getById(idInt);
+            req.setAttribute("car", car);
             req.getRequestDispatcher("/garage.jsp").forward(req, resp);
 
 
@@ -51,7 +52,7 @@ public class CarServlet extends HttpServlet {
         String id = req.getParameter("id");
         String name = req.getParameter("name");
         String color = req.getParameter("color");
-        if (id != null && name != null) {
+        if (StringUtils.isNoneBlank(id, name, color)) {
             resp.setStatus(201);
             carService.saveCar(new Car(Integer.valueOf(id), name, color));
         } else {

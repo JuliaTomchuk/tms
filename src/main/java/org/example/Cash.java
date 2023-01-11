@@ -2,9 +2,25 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Cash {
     public static List<Car> cars = new ArrayList<>();
+    private static Cash cash;
+
+    private Cash() {
+    }
+
+    public static Cash getInstance() {
+        if (cash == null) {
+            synchronized (Cash.class) {
+                if (cash == null) {
+                    cash = new Cash();
+                }
+            }
+        }
+        return cash;
+    }
 
     public void add(Car car) {
         cars.add(car);
@@ -14,25 +30,23 @@ public class Cash {
         return cars;
     }
 
-    public List<Car> getById(int id) {
-        List<Car> car = new ArrayList<>();
-        for (Car c : cars) {
-            if (c.getId() == id) {
-                car.add(c);
-            }
-        }
-        return car;
+    public Optional<Car> getById(int id) {
+        return cars.stream().filter(c -> c.getId() == id).findAny();
+
     }
+
 
     public void delete(int id) {
-        for (Car c : cars) {
-            if (c.getId() == id) {
-                cars.remove(c);
-            }
+
+        Optional<Car> car = cars.stream().filter(v -> v.getId() == id).findAny();
+        if (car.isPresent()) {
+            cars.remove(car.get());
         }
     }
 
+
     public void updateCar(Car car) {
+
         for (Car c : cars) {
             if (c.getId() == car.getId()) {
                 c.setName(car.getName());

@@ -1,16 +1,18 @@
 package org.example;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class CarServiceImpl implements CarService {
-    private StartServlet startServlet = new StartServlet();
-    private Cash cash= new Cash();
+    private  DBConnection dbConnection = DBConnection.getInstance();
+    private Cash cash = Cash.getInstance();
 
     @Override
     public void saveCar(Car car) {
-        Connection connection = startServlet.getConnection();
+        Connection connection = dbConnection.getConnection();
         try {
             PreparedStatement statement = connection.prepareStatement("insert into cars (id_car,name,color) values(?,?,?)");
             statement.setInt(1, car.getId());
@@ -24,29 +26,32 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public List<Car> getById(int id) {
+    public  Car getById(int id) {
 
-        List<Car> car = cash.getById(id);
+        Optional<Car> car = cash.getById(id);
         if (car.isEmpty()) {
-            Connection connection = startServlet.getConnection();
+            Connection connection = dbConnection.getConnection();
             try {
                 PreparedStatement statement = connection.prepareStatement("SELECT * from cars where id_car=?");
                 statement.setInt(1, id);
                 ResultSet resultSet = statement.executeQuery();
-                List<Car> cars = get(resultSet);
-                return cars;
+                 car = Optional.ofNullable(get(resultSet));
+                if(car.get().getName()!=null){
+                    cash.add(car.get());
+                }
+                return car.get();
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
         } else {
-            return car;
+            return car.get();
         }
     }
 
     @Override
     public void delete(int id) {
 
-        Connection connection = startServlet.getConnection();
+        Connection connection = dbConnection.getConnection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("DELETE from cars WHERE id_car=?");
             preparedStatement.setInt(1, id);
@@ -59,13 +64,13 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> getAll() {
-       return cash.getAll();
+        return cash.getAll();
 
     }
 
     @Override
     public void updateCar(Car car) {
-        Connection connection = startServlet.getConnection();
+        Connection connection = dbConnection.getConnection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("update cars set color=? where id_car=?;");
             preparedStatement.setString(1, car.getColor());
@@ -78,20 +83,21 @@ public class CarServiceImpl implements CarService {
 
     }
 
-    private List<Car> get(ResultSet resultSet) {
-        List<Car> cars = new ArrayList<>();
+    private Car get(ResultSet resultSet) {
+        Car car = new Car();
         try {
-            while (resultSet.next()) {
-                String name = resultSet.getString("name");
-                int id = Integer.valueOf(resultSet.getInt("id_car"));
-                String color = resultSet.getString("color");
-                Car car = new Car(id, name, color);
-                cars.add(car);
+
+            String name = resultSet.getString("name");
+            int id = resultSet.getInt("id_car");
+            String color = resultSet.getString("color");
+            if (StringUtils.isNoneBlank(name, color) && id != 0) {
+                car = new Car(id, name, color);
+
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
 
         }
-        return cars;
+        return car;
     }
 }
