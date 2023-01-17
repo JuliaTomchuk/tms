@@ -4,29 +4,41 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-@WebServlet(value = "/start", loadOnStartup =1 )
+
+@WebServlet(value = "/start", loadOnStartup = 1)
 public class StartServlet extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         try {
             Class.forName("org.postgresql.Driver");
 
-        } catch (ClassNotFoundException e ) {
+        } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-
-    }
-    public Connection getConnection(){
+        Connection connection =DBConnection.getInstance().getConnection();
         try {
-            return  DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","14271915");
+            PreparedStatement preparedStatement = connection.prepareStatement("Select* from cars");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            addCarsToCash(resultSet);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
+
+    }
+
+    private void addCarsToCash(ResultSet resultSet) throws SQLException {
+        while(resultSet.next()){
+            String name= resultSet.getString("name");
+            String color= resultSet.getString("color");
+            int id = resultSet.getInt("id_car");
+            Cash.getInstance().add(new Car(id,name,color));
+        }
     }
 
 

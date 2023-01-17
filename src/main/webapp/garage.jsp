@@ -58,6 +58,19 @@
                     <th>Update</th>
                 </tr>
 
+                <tr>
+                    <td>
+                        <c:out value="${car.id}"/>
+                    </td>
+                    <td>
+                        <c:out value="${car.name}"/>
+                    </td>
+                    <td>
+                        <c:out value="${car.color}"/>
+                    </td>
+
+                    </tr>
+
                 <c:forEach var="car" items="${cars}">
                 <tr>
                     <td>
