@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.time.LocalTime;
 import java.util.*;
 
 @WebServlet("/garage")
@@ -51,13 +50,43 @@ public class CarServlet extends HttpServlet {
         String id = req.getParameter("id");
         String name = req.getParameter("name");
         String color = req.getParameter("color");
-        if (id != null && name != null) {
+        if (!(StringUtils.isAnyBlank(id, name, color))) {
             resp.setStatus(201);
             carService.saveCar(new Car(Integer.valueOf(id), name, color));
         } else {
             resp.setStatus(400);
         }
         resp.sendRedirect("garage");
+
+    }
+
+    @Override
+    public void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String id = req.getParameter("idDel");
+        if (id != null && garage.getCars().containsKey(Integer.valueOf(id))) {
+            garage.deleteCar(Integer.valueOf(id));
+
+        } else {
+            resp.setStatus(400);
+        }
+
+    }
+
+    @Override
+    public void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+        String id = req.getParameter("id");
+        String name = req.getParameter("name");
+        String color = req.getParameter("color");
+        boolean isIdNull = (id == null);
+        boolean isNameNull = (name == null);
+        boolean isColorNull = (color == null);
+        boolean containsKey = garage.getCars().containsKey(Integer.valueOf(id));
+
+        if ((!isIdNull) && (!isNameNull) && containsKey && (!isColorNull)) {
+            garage.getCars().replace(Integer.valueOf(id), new Car(Integer.valueOf(id), name, color));
+        } else {
+            resp.setStatus(400);
+        }
 
     }
 

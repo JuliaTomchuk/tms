@@ -1,4 +1,14 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="org.example.Garage" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="org.example.Car" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.Set" %><%--
+  Created by IntelliJ IDEA.
+  User: Aleksandr
+  Date: 28.12.2022
+  Time: 15:24
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -47,6 +57,9 @@
 
 
             </form>
+            <%
+                Map<Integer, Car> cars = (Map) request.getAttribute("garage");
+                    %>
 
 
             <table class="table table-striped">
@@ -57,6 +70,12 @@
                     <th>Delete</th>
                     <th>Update</th>
                 </tr>
+                    <% Set<Integer> ids = cars.keySet();
+        for(Integer id:ids){
+            Car car= cars.get(id);
+            out.println("<tr>"+ "<td>"+car.getId()+"</td><td>"+car.getName()+"</td><td>"+car.getColor()+"</td> <td><form action=\"\\delete\" method=\"post\"><input type=\"hidden\" name=\"idDel\" value =\""+car.getId()+"\"><button type=\"submit\"  class=\"btn btn-outline-primary\">Удалить</button></form></td></tr>");
+        }
+          %>
 
                 <c:forEach var="car" items="${cars}">
                 <tr>
@@ -131,6 +150,8 @@
                 </div>
                 <button type="submit" class="btn btn-outline-primary">Подтвердить</button>
                 <br>
+
+
             </form>
         </div>
     </div>
