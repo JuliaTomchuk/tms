@@ -1,2 +1,6 @@
 rootProject.name = 'tms'
+include 'lesson_29'
+include 'lesson_29_builder'
+include 'lesson_29_abstract_factory'
+include 'lesson_29_observer'
 

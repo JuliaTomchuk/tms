@@ -1,0 +1,125 @@
+Index: src/main/java/org/example/CarService.java
+===================================================================
+diff --git a/src/main/java/org/example/CarService.java b/src/main/java/org/example/CarService.java
+--- a/src/main/java/org/example/CarService.java	
++++ b/src/main/java/org/example/CarService.java	
+@@ -5,7 +5,7 @@
+ public interface CarService {
+     void saveCar(Car car);
+ 
+-    List<Car> getById(int id);
++    Car getById(int id);
+ 
+     void delete(int id);
+ 
+Index: src/main/java/org/example/CarServiceImpl.java
+===================================================================
+diff --git a/src/main/java/org/example/CarServiceImpl.java b/src/main/java/org/example/CarServiceImpl.java
+--- a/src/main/java/org/example/CarServiceImpl.java	
++++ b/src/main/java/org/example/CarServiceImpl.java	
+@@ -6,7 +6,7 @@
+ 
+ public class CarServiceImpl implements CarService {
+     private StartServlet startServlet = new StartServlet();
+-    private Cash cash= new Cash();
++    private Cash cash = new Cash();
+ 
+     @Override
+     public void saveCar(Car car) {
+@@ -24,17 +24,17 @@
+     }
+ 
+     @Override
+-    public List<Car> getById(int id) {
++    public Car getById(int id) {
+ 
+-        List<Car> car = cash.getById(id);
+-        if (car.isEmpty()) {
++        Car car = cash.getById(id);
++        if (car.getName().isEmpty()) {
+             Connection connection = startServlet.getConnection();
+             try {
+                 PreparedStatement statement = connection.prepareStatement("SELECT * from cars where id_car=?");
+                 statement.setInt(1, id);
+                 ResultSet resultSet = statement.executeQuery();
+-                List<Car> cars = get(resultSet);
+-                return cars;
++                 car = get(resultSet);
++                return car;
+             } catch (SQLException e) {
+                 throw new RuntimeException(e);
+             }
+@@ -59,7 +59,7 @@
+ 
+     @Override
+     public List<Car> getAll() {
+-       return cash.getAll();
++        return cash.getAll();
+ 
+     }
+ 
+@@ -78,20 +78,20 @@
+ 
+     }
+ 
+-    private List<Car> get(ResultSet resultSet) {
+-        List<Car> cars = new ArrayList<>();
++    private Car get(ResultSet resultSet) {
++        Car car = new Car();
+         try {
+             while (resultSet.next()) {
+                 String name = resultSet.getString("name");
+                 int id = Integer.valueOf(resultSet.getInt("id_car"));
+                 String color = resultSet.getString("color");
+-                Car car = new Car(id, name, color);
+-                cars.add(car);
++                 car = new Car(id, name, color);
++
+             }
+         } catch (SQLException e) {
+             throw new RuntimeException(e);
+ 
+         }
+-        return cars;
++        return car;
+     }
+ }
+Index: src/main/java/org/example/Cash.java
+===================================================================
+diff --git a/src/main/java/org/example/Cash.java b/src/main/java/org/example/Cash.java
+--- a/src/main/java/org/example/Cash.java	
++++ b/src/main/java/org/example/Cash.java	
+@@ -14,11 +14,11 @@
+         return cars;
+     }
+ 
+-    public List<Car> getById(int id) {
+-        List<Car> car = new ArrayList<>();
++    public Car getById(int id) {
++       Car car=new Car();
+         for (Car c : cars) {
+             if (c.getId() == id) {
+-                car.add(c);
++                car=c;
+             }
+         }
+         return car;
+Index: .idea/dataSources.xml
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+--- a/.idea/dataSources.xml	
++++ b/.idea/dataSources.xml	
+@@ -1,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
++    <data-source source="LOCAL" name="postgres@localhost" uuid="37ff4474-633d-4f42-88c4-c62614608ff5">
++      <driver-ref>postgresql</driver-ref>
++      <synchronize>true</synchronize>
++      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
++      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
++      <working-dir>$ProjectFileDir$</working-dir>
++    </data-source>
++  </component>
++</project>
+\ No newline at end of file
