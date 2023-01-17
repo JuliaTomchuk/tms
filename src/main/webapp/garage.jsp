@@ -60,12 +60,15 @@
             <%
                 Map<Integer, Car> cars = (Map) request.getAttribute("garage");
                     %>
+
+
             <table class="table table-striped">
                 <tr>
                     <th> ID</th>
                     <th> Car</th>
                     <th>Color</th>
                     <th>Delete</th>
+                    <th>Update</th>
                 </tr>
                     <% Set<Integer> ids = cars.keySet();
         for(Integer id:ids){
@@ -74,6 +77,38 @@
         }
           %>
 
+                <c:forEach var="car" items="${cars}">
+                <tr>
+                    <td>
+                        <c:out value="${car.id}"/>
+                    </td>
+                    <td>
+                        <c:out value="${car.name}"/>
+                    </td>
+                    <td>
+                        <c:out value="${car.color}"/>
+                    </td>
+                    <td>
+                        <form action="/delete" method="post">
+                            <input type="hidden" name="carId" value="${car.id}">
+                            <button type="submit" class="btn btn-outline-primary">Удалить</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/update" method="post">
+                            <input type="hidden" name="idUp" value="${car.id}">
+                            <input type="hidden" name="nameUp" value="${car.name}">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingColorCar" name="colorUp">
+                                <label for="floatingColor">Новый цвет машины</label>
+                            </div>
+                            <button type="submit" class="btn btn-outline-primary">Обновить</button>
+
+                        </form>
+                    </td>
+
+                </tr>
+                </c:forEach>
 
         </div>
 
@@ -84,7 +119,7 @@
             <h4>Удалите машину</h4>
             <form action="/delete" method="post">
                 <div class="form-floating">
-                    <input type="number" class="form-control" id="floatingDelete" name="idDel">
+                    <input type="number" class="form-control" id="floatingDelete" name="carId">
                     <label for="floatingDelete">Введите ID машины для удаления</label><br>
                 </div>
                 <button type="submit" class="btn btn-outline-primary">Подтвердить</button>
@@ -121,6 +156,7 @@
         </div>
     </div>
 </div>
+<br>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
