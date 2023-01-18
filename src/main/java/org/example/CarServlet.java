@@ -15,7 +15,7 @@ import java.util.List;
 @WebServlet("/garage")
 public class CarServlet extends HttpServlet {
 
-    private CarService carService = ServiceProvider.getInstance().getCarService();
+    private CarService carService = new Cache( ServiceProvider.getInstance().getCarService());
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
