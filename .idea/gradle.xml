@@ -10,10 +10,13 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/chain" />
             <option value="$PROJECT_DIR$/lesson_29" />
             <option value="$PROJECT_DIR$/lesson_29_abstract_factory" />
             <option value="$PROJECT_DIR$/lesson_29_builder" />
+            <option value="$PROJECT_DIR$/lesson_29_command" />
             <option value="$PROJECT_DIR$/lesson_29_observer" />
+            <option value="$PROJECT_DIR$/lesson_29_prototype" />
           </set>
         </option>
       </GradleProjectSettings>

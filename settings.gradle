@@ -3,4 +3,7 @@ include 'lesson_29'
 include 'lesson_29_builder'
 include 'lesson_29_abstract_factory'
 include 'lesson_29_observer'
+include 'lesson_29_prototype'
+include 'chain'
+include 'lesson_29_command'
 
