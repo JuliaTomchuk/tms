@@ -12,7 +12,7 @@ import java.io.IOException;
 @WebServlet("/update")
 public class UpdateServlet extends HttpServlet {
 
-    private CarService carService = new Cache(ServiceProvider.getInstance().getCarService());
+    private CarService carService = new CacheCarService(ServiceProvider.getInstance().getCarService());
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
