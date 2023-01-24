@@ -10,14 +10,16 @@ public class Director extends Employee {
 
     public Director() {
         super();
-
         subordinates = new ArrayList<>();
+        position = Position.DIRECTOR;
     }
 
-    public Director(String name, String surname, Position position, int experience, List<Employee> subordinates) {
-        super(name, surname, position, experience);
+    public Director(String name, String surname, int experience, List<Employee> subordinates) {
+        super(name, surname, experience);
         this.subordinates = subordinates;
+        position = Position.DIRECTOR;
     }
+
 
     public List<Employee> getSubordinates() {
         return subordinates;
@@ -42,8 +44,8 @@ public class Director extends Employee {
     }
 
     @Override
-    public int getSalary(int baseRate) throws SalaryException {
-        int salary = baseRate * super.getExperience() * super.getPosition().rate * subordinates.size();
+    public int getSalary(int baseRate) {
+        int salary = baseRate * super.getExperience() * position.rate + subordinates.size();
         return salary;
     }
 
@@ -52,7 +54,7 @@ public class Director extends Employee {
         if (this == o) return true;
         if (!(o instanceof Director director)) return false;
         if (!super.equals(o)) return false;
-        return Objects.equals(getSubordinates(), director.getSubordinates());
+        return getSubordinates().equals(director.getSubordinates());
     }
 
     @Override

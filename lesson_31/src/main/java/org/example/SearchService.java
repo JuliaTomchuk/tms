@@ -1,19 +1,32 @@
 package org.example;
 
 
+import java.util.Optional;
+
 public class SearchService {
 
-    public boolean search(Employee employee, Director director) {
-        if (director.getSubordinates().contains(employee)) {
-            return true;
+    public Employee search(String name, String surname, Director director) {
+
+        Optional<Employee> employeeOptional = director.getSubordinates().stream().filter(e -> e.getName().equals(name) && e.getSurname().equals(surname)).findFirst();
+
+        if (employeeOptional.isPresent()) {
+            return employeeOptional.get();
+        } else {
+
+
+            for (Employee e : director.getSubordinates()) {
+                if (e instanceof Director) {
+                    Employee employee = search(name, surname, (Director) e);
+                    if (employee.getName() != null) {
+                        return employee;
+                    }
+                }
+            }
+            return new Worker();
         }
 
-        long count = director.getSubordinates().stream().filter(e -> e instanceof Director).filter(e -> search(employee, (Director) e)).count();
-        if (count > 0) {
-            return true;
-        }
-        return false;
     }
+
 }
 
 

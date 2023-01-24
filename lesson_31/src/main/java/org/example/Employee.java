@@ -6,27 +6,27 @@ public abstract class Employee {
 
     private String name;
     private String surname;
-    private Position position;
     private int experience;
+    protected Position position;
 
 
     public Employee() {
     }
 
+    public Position getPosition() {
+        return position;
+    }
 
-    public Employee(String name, String surname, Position position, int experience) {
+    public Employee(String name, String surname, int experience) {
         this.name = name;
         this.surname = surname;
-        this.position = position;
         this.experience = experience;
 
     }
 
-    public int getSalary(int baseRate) throws SalaryException {
+    public int getSalary(int baseRate) {
         int salary = baseRate * experience * position.rate;
-        if (salary <= 0) {
-            throw new SalaryException("Salary is less or equals zero");
-        }
+
         return salary;
     }
 
@@ -46,13 +46,6 @@ public abstract class Employee {
         this.surname = surname;
     }
 
-    public Position getPosition() {
-        return position;
-    }
-
-    public void setPosition(Position position) {
-        this.position = position;
-    }
 
     public int getExperience() {
         return experience;
@@ -71,7 +64,7 @@ public abstract class Employee {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(), getSurname(), getPosition(), getExperience());
+        return Objects.hash(getName(), getSurname(), getExperience(), getPosition());
     }
 
     @Override
@@ -79,8 +72,9 @@ public abstract class Employee {
         return "Employee{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", position=" + position +
                 ", experience=" + experience +
+                ", position=" + position +
                 '}';
     }
 }
+

@@ -6,13 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class Cache implements CarService {
+public class CacheCarService implements CarService {
 
     public static final List<Car> cache = new ArrayList<>();
 
     private CarService carService;
 
-    public Cache(CarService carService) {
+    public CacheCarService(CarService carService) {
         this.carService = carService;
     }
 
@@ -26,7 +26,7 @@ public class Cache implements CarService {
     public Car getById(int id) {
 
         Car car = cache.stream().filter(c -> c.getId() == id).findFirst().orElse(new Car());
-        if (isPresent(car)) {
+        if (car.getId()!=0) {
             return car;
         } else {
             Car car1 = carService.getById(id);
@@ -57,14 +57,9 @@ public class Cache implements CarService {
         Optional<Car> carCache = cache.stream().filter(c -> c.getId() == car.getId()).findFirst();
         if (carCache.isPresent()) {
             cache.remove(carCache);
-            cache.add(car);
-        } else {
-            cache.add(car);
-        }
+            }
 
     }
 
-    private boolean isPresent(Car car) {
-        return StringUtils.isNoneBlank(car.getName(), car.getColor(), String.valueOf(car.getId()));
-    }
+
 }
