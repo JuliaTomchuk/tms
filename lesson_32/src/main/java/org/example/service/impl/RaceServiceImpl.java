@@ -4,11 +4,12 @@ import org.example.entity.Pair;
 import org.example.service.RaceService;
 import org.example.service.ResultChecker;
 import org.example.view.View;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
+@Service
 public class RaceServiceImpl implements RaceService {
 
 
