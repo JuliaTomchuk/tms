@@ -1,5 +1,6 @@
 package org.example.service.impl;
 
+import org.example.aop.Benchmark;
 import org.example.entity.Pair;
 import org.example.service.RaceService;
 import org.example.service.ResultChecker;
@@ -24,6 +25,7 @@ public class RaceServiceImpl implements RaceService {
     private Random random = new Random();
 
     @Override
+    @Benchmark
     public List<Pair> go(List<Pair> participants) {
         int counter = 1;
         List<Pair> result = new ArrayList<>();
