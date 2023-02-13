@@ -37,6 +37,7 @@
 
     </bean>
 
+
     <bean class="org.example.service.impl.MoneyServiceImpl" name="moneyService"></bean>
     <bean class="org.example.service.impl.RaceServiceImpl" name="raceService" autowire="constructor"></bean>
     <bean class="org.example.view.ViewImpl"></bean>

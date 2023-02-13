@@ -1,6 +1,7 @@
 package org.example.view;
 
 import org.example.entity.Pair;
+import org.example.entity.Result;
 
 import java.util.List;
 
@@ -9,22 +10,26 @@ public class ViewImpl implements View {
     public void printResult(int circle, List<Pair> pairs) {
 
         System.out.println(circle + " круг итог:");
+        int place =1;
 
         for (int i = 0; i < pairs.size(); i++) {
-            System.out.println(i + 1 + " место: " + pairs.get(i));
+            System.out.println(place + " место: " + pairs.get(i));
+            place++;
         }
 
     }
 
     @Override
-    public void printResult(int money, boolean isWinner) {
-        if (isWinner) {
+    public void printResult(Result result) {
+        if (result.isWinner()) {
             System.out.println("Поздравляю!!! Вы выиграли!!!");
-            System.out.println("Деньги:" + money);
+            System.out.println("Деньги:" + result.getMoney());
+            System.out.println("Хотите продолжить игру? 1 - да, 0 - нет");
 
         } else {
             System.out.println("Вы проиграли");
-            System.out.println("Деньги:" + money);
+            System.out.println("Деньги:" + result.getMoney());
+            System.out.println("Хотите продолжить игру? 1 - да, 0 - нет");
         }
     }
 }
