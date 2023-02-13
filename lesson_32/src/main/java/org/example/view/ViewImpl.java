@@ -12,8 +12,8 @@ public class ViewImpl implements View {
         System.out.println(circle + " круг итог:");
         int place =1;
 
-        for (int i = 0; i < pairs.size(); i++) {
-            System.out.println(place + " место: " + pairs.get(i));
+        for (Pair pair : pairs) {
+            System.out.println(place + " место: " + pair);
             place++;
         }
 
