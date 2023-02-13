@@ -5,41 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cf26139-ad4f-4289-a712-651e9d5fceb3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/AbstractFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/Body.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/FenderFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/GibsonFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/Knob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/MainService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/Pickup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/Strings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/Tuner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/BodyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/KnobService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/PickupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/StringsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/TunerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/FenderBodyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/FenderKnobService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/FenderNeckService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/FenderPickupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/FenderStringsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/FenderTunerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/GibsonBodyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/GibsonKnobService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/GibsonNeckService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/GibsonPickupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/GibsonStringsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/GibsonTunerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_builder/src/main/java/org/example/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_builder/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_observer/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_01_2023_07_351.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_01_2023_07_351/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/GameServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/GameServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/view/ViewImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/view/ViewImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +64,7 @@
         <option value="Jsp File" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -97,7 +72,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson27.03" />
+        <entry key="$PROJECT_DIR$" value="Lesson_34" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -121,52 +96,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "F:/tms/tms/lesson_29_builder",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/tms/tms&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;767f317534b42b7a93529e5a4a25d89c&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\tms\tms\lesson_29_command\src\main\java\org\example" />
       <recent name="F:\tms\tms\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (5)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="tms.lesson_29_abstract_factory.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="tms.lesson_29_observer.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
@@ -206,6 +169,19 @@
     <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="tms.lesson_29_command.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="tms.lesson_32.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
@@ -307,20 +283,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main (2)" />
-      <item itemvalue="Application.Main (3)" />
       <item itemvalue="Application.Main (4)" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (3)" />
       <item itemvalue="Application.Main (5)" />
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.70" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (5)" />
         <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -350,6 +326,9 @@
       <workItem from="1673684700019" duration="3603000" />
       <workItem from="1673689983791" duration="10121000" />
       <workItem from="1673768780752" duration="13070000" />
+      <workItem from="1676121058100" duration="17000" />
+      <workItem from="1676232778222" duration="2180000" />
+      <workItem from="1676262177362" duration="1842000" />
     </task>
     <task id="LOCAL-00001" summary="lesson23">
       <created>1671382719234</created>
@@ -407,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673804237780</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="lesson 34">
+      <created>1676117412637</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676117412637</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +419,8 @@
     <MESSAGE value="lesson26.version2" />
     <MESSAGE value="lesson27.3 with singleton" />
     <MESSAGE value="lesson29" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson29" />
+    <MESSAGE value="lesson 34" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 34" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
