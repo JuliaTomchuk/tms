@@ -18,7 +18,8 @@ public class ResultCheckerImpl implements ResultChecker {
 
     @Override
     public boolean isWinner(List<Pair> participants, Pair chosen) {
-        return chosen.equals(participants.get(0));
+        List<Pair> pairs=getResult(participants);
+        return chosen.equals(pairs.get(0));
     }
 
 
