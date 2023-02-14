@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class RaceAspect {
-    @Pointcut
+    @Pointcut("@annotation(org.example.aop.Benchmark)")
     public void pointCut() {
     }
 
-    @Around("@annotation(org.example.aop.Benchmark)")
+    @Around("pointCut()")
     public Object doAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         long before = System.currentTimeMillis();
 
