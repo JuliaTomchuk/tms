@@ -12,12 +12,6 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    implementation group: 'org.springframework', name: 'spring-context', version: '5.3.25'
-    implementation 'org.aspectj:aspectjweaver:1.9.19'
-    compileOnly 'org.projectlombok:lombok:1.18.24'
-    annotationProcessor 'org.projectlombok:lombok:1.18.24'
-
-
 }
 
 test {
