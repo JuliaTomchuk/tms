@@ -7,13 +7,14 @@ import org.example.service.MoneyService;
 import org.example.service.RaceService;
 import org.example.service.ResultChecker;
 import org.example.view.View;
+import org.springframework.stereotype.Service;
 
 
 
 
 import java.util.List;
 import java.util.Scanner;
-
+@Service
 public class GameServiceImpl implements GameService {
     private final MoneyService moneyService;
     private final RaceService raceService;

@@ -2,9 +2,10 @@ package org.example.view;
 
 import org.example.entity.Pair;
 import org.example.entity.Result;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ViewImpl implements View {
     @Override
     public void printResult(int circle, List<Pair> pairs) {

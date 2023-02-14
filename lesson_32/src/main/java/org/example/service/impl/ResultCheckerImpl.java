@@ -3,10 +3,11 @@ package org.example.service.impl;
 import org.example.entity.Pair;
 import org.example.entity.PairComparator;
 import org.example.service.ResultChecker;
+import org.springframework.stereotype.Service;
 
 
 import java.util.List;
-
+@Service
 public class ResultCheckerImpl implements ResultChecker {
     @Override
     public List<Pair> getResult(List<Pair> participants) {
