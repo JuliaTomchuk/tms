@@ -5,41 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cf26139-ad4f-4289-a712-651e9d5fceb3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/AbstractFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/Body.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/FenderFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/GibsonFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/Knob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/MainService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/Pickup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/Strings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/Tuner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/BodyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/KnobService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/PickupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/StringsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/TunerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/FenderBodyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/FenderKnobService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/FenderNeckService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/FenderPickupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/FenderStringsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/FenderTunerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/GibsonBodyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/GibsonKnobService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/GibsonNeckService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/GibsonPickupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/GibsonStringsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_abstract_factory/src/main/java/org/example/service/impl/GibsonTunerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_builder/src/main/java/org/example/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_builder/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_29_observer/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_01_2023_07_351/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/aop/RaceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/aop/RaceAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +67,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson27.03" />
+        <entry key="$PROJECT_DIR$" value="Lesson_34" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -131,7 +101,8 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
+    "spring.configuration.checksum": "767f317534b42b7a93529e5a4a25d89c"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -350,6 +321,7 @@
       <workItem from="1673684700019" duration="3603000" />
       <workItem from="1673689983791" duration="10121000" />
       <workItem from="1673768780752" duration="13070000" />
+      <workItem from="1676353574565" duration="1339000" />
     </task>
     <task id="LOCAL-00001" summary="lesson23">
       <created>1671382719234</created>
@@ -407,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673804237780</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="lesson 34.01">
+      <created>1676353671951</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676353671951</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +412,8 @@
     <MESSAGE value="lesson26.version2" />
     <MESSAGE value="lesson27.3 with singleton" />
     <MESSAGE value="lesson29" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson29" />
+    <MESSAGE value="lesson 34.01" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 34.01" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
