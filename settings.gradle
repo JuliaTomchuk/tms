@@ -6,6 +6,6 @@ include 'lesson_29_observer'
 include 'lesson_29_prototype'
 include 'chain'
 include 'lesson_29_command'
-include 'lesson_32:untitled1'
-findProject(':lesson_32:untitled1')?.name = 'untitled1'
+include 'lesson_32:untitled'
+findProject(':lesson_32:untitled')?.name = 'untitled'
 
