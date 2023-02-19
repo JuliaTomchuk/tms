@@ -1,17 +1,12 @@
 package org.example.entity;
 
-
 import java.util.Objects;
-
 
 public class Pair {
 
     private Horse horse;
-
     private Rider rider;
-
     private int pairSpeed;
-
 
     public Pair(Horse horse, Rider rider) {
 

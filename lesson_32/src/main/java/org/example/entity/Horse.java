@@ -1,26 +1,29 @@
 package org.example.entity;
 
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Objects;
 import java.util.Random;
 
 public class Horse {
-
-    private String name;
+    @NotBlank
+    private String nameHorse;
     private int speed;
 
-    public Horse(String name) {
+    public Horse(String nameHorse) {
 
-        this.name = name;
+        this.nameHorse = nameHorse;
         Random random = new Random();
         speed = random.nextInt(5, 50);
     }
 
-    public String getName() {
-        return name;
+    public String getNameHorse() {
+        return nameHorse;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameHorse(String name) {
+        this.nameHorse = name;
     }
 
     public int getSpeed() {
@@ -31,18 +34,18 @@ public class Horse {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Horse horse)) return false;
-        return getSpeed() == horse.getSpeed() && getName().equals(horse.getName());
+        return getSpeed() == horse.getSpeed() && getNameHorse().equals(horse.getNameHorse());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(), getSpeed());
+        return Objects.hash(getNameHorse(), getSpeed());
     }
 
     @Override
     public String toString() {
         return "Horse{" +
-                "name='" + name + '\'' +
+                "nameHorse ='" + nameHorse + '\'' +
                 ", speed=" + speed +
                 '}';
     }
