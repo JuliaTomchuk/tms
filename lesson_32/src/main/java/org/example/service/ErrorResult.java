@@ -5,5 +5,5 @@ import org.springframework.web.servlet.ModelAndView;
 
 public interface ErrorResult {
 
-    ModelAndView show(BindingResult result);
+    ModelAndView get(BindingResult result);
 }

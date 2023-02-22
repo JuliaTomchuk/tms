@@ -5,8 +5,10 @@ import org.example.entity.Horse;
 import org.example.entity.Pair;
 import org.example.entity.Result;
 import org.example.entity.Rider;
+import org.example.service.ErrorResult;
 import org.example.service.GameService;
-import org.example.service.ShowError;
+import org.example.service.PairService;
+import org.example.service.impl.NoSuchPairException;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -16,64 +18,73 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.List;
+import javax.validation.constraints.Positive;
 
 
 @Controller
 @RequestMapping("/race")
 public class RaceController {
 
-private List<Pair> pairs =new ArrayList<>();
-private GameService gameService;
-private ShowError showError;
-public  RaceController(GameService gameService, ShowError showError){
+
+private final GameService gameService;
+private final ErrorResult errorResult;
+private final Bet raceBet;
+private final  PairService pairService;
+
+
+public  RaceController(GameService gameService, ErrorResult errorResult,Bet raceBet, PairService pairService){
     this.gameService =gameService;
-    this.showError= showError;
+    this.errorResult= errorResult;
+    this.raceBet=raceBet;
+    this.pairService=pairService;
+
 }
 
     @GetMapping
     public ModelAndView home( ){
     ModelAndView modelAndView = new ModelAndView("race");
-    modelAndView.addObject(pairs);
+    modelAndView.addObject(pairService.getPairs());
         return modelAndView;
     }
 
     @PostMapping
     public ModelAndView addPair(@Valid Horse horse, BindingResult resultHorse, @Valid Rider rider, BindingResult resultRider){
     if(resultHorse.hasErrors()){
-         return showError.show(resultHorse);
+         return errorResult.get(resultHorse);
     }
     if(resultRider.hasErrors()){
-        return showError.show(resultRider);
+        return errorResult.get(resultRider);
     }
-        Pair pair = new Pair(horse,rider);
-        pairs.add(pair);
+         pairService.savePair(horse, rider);
+
         ModelAndView modelAndView = new ModelAndView("race");
-       modelAndView.addObject("pairs",pairs);
+       modelAndView.addObject("pairs",pairService.getPairs());
 
         return modelAndView;
     }
 
     @PostMapping("/doBet")
-    public ModelAndView startGame(@Valid Bet bet,BindingResult resultBet){
-    if(resultBet.hasErrors()){
-        return showError.show(resultBet);
-    }
-      Result result =gameService.start(bet, pairs );
-      ModelAndView modelAndView= new ModelAndView("resultPage");
+    public ModelAndView startGame(@Positive Integer bet, @Positive Integer numberOfPair){
+
+
+        raceBet.setBet(bet);
+        raceBet.setNumberOfPair(numberOfPair);
+
+        Result result = null;
+        try {
+            result = gameService.start();
+        } catch (NoSuchPairException e) {
+            ModelAndView modelAndView = new ModelAndView("race");
+            modelAndView.addObject("noSuchPair", "no such pair");
+            return modelAndView;
+        }
+        ModelAndView modelAndView= new ModelAndView("resultPage");
       modelAndView.addObject("result",result);
       return modelAndView;
 
     }
 
-    @ExceptionHandler(IndexOutOfBoundsException.class)
-    public ModelAndView processError(IndexOutOfBoundsException ex){
-    ModelAndView modelAndView = new ModelAndView("race");
-    String error = ex.getMessage();
-    modelAndView.addObject("error",error);
-    return modelAndView;
-    }
+
 
 
 }

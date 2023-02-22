@@ -1,7 +1,6 @@
 package org.example.service.impl;
 
 import org.example.service.ErrorResult;
-import org.example.service.ShowError;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;

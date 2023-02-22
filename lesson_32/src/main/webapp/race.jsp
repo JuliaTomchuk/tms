@@ -25,9 +25,9 @@
 <H3> <sp:message code="label.SecondForm"></sp:message></H3>
 <form action="/race/doBet" method="post">
     <label style="float: inside" for="bet"> <sp:message code="label.Bet"></sp:message></label><br>
-    <input type =number min="1" name="bet" id="bet"><br>
+    <input type =number min="1" name="bet" id="bet">${error}<br>
     <label style="float: inside" for="numberOfPair"><sp:message code="label.NumberOfPair"></sp:message></label><br>
-    <input type="number" min="1" name="numberOfPair" id="numberOfPair"> ${error} <br>
+    <input type="number" min="1" name="numberOfPair" id="numberOfPair"> ${error} ${noSuchPair}<br>
     <input type="submit">
 
 </form>

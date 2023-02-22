@@ -5,28 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cf26139-ad4f-4289-a712-651e9d5fceb3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/config/DispatcherServletConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/web/RaceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/webapp/addPair.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/webapp/pairs.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-web/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-web/src/main/java/org/example/config/DispatcherConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-web/src/main/java/org/example/web/CarResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-web/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/PairService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/NoSuchPairException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/PairServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2023_07_45.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2023_07_45/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_02_2023_07_59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_02_2023_07_59/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_02_2023_09_08.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_02_2023_09_08/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/entity/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/entity/Horse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/entity/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/entity/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/entity/Rider.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/entity/Rider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/entity/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/entity/Bet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/ShowError.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/ErrorResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/GameServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/GameServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/RaceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/RaceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/view/View.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/view/ViewImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/resources/spring-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/ShowErrorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/ErrorResultImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/web/RaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/web/RaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/webapp/race.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/webapp/race.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/org/example/config/DispatcherConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/org/example/config/DispatcherConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/org/example/web/CarResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/org/example/web/CarResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,31 +107,31 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "14",
-    "last_opened_file_path": "F:/tms/tms/spring-web/src/main/webapp/WEB-INF/lib",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.097751714",
-    "project.structure.side.proportion": "0.47562298",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "spring.configuration.checksum": "7733a09a4a9adf35deb2edb150ac9398"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;14&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/tms/tms/spring-web/src/main/webapp/WEB-INF/lib&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.097751714&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.47562298&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;c79006cfa1775a5cb053d293763ccc92&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.service.impl" />
@@ -372,7 +370,11 @@
       <workItem from="1676608148469" duration="3952000" />
       <workItem from="1676718200655" duration="3368000" />
       <workItem from="1676740172684" duration="6156000" />
-      <workItem from="1676787074400" duration="23907000" />
+      <workItem from="1676787074400" duration="28225000" />
+      <workItem from="1676953576373" duration="6353000" />
+      <workItem from="1676978700760" duration="2401000" />
+      <workItem from="1677004206099" duration="5897000" />
+      <workItem from="1677041004444" duration="1727000" />
     </task>
     <task id="LOCAL-00001" summary="lesson23">
       <created>1671382719234</created>
@@ -444,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676355124493</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="lesson 36">
+      <created>1676813341283</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676813341283</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +481,8 @@
     <MESSAGE value="lesson27.3 with singleton" />
     <MESSAGE value="lesson29" />
     <MESSAGE value="lesson 34.01" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 34.01" />
+    <MESSAGE value="lesson 36" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 36" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

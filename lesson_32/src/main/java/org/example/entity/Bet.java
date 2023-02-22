@@ -4,16 +4,20 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotNull;
+
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 import javax.validation.constraints.Positive;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@RequestScope
+@Component
 public class Bet {
-    @Positive @NotNull
+    @Positive
     private int bet;
-    @Positive @NotNull
+    @Positive
     private int numberOfPair;
 
 }
