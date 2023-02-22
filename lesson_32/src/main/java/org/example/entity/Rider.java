@@ -1,10 +1,12 @@
 package org.example.entity;
 
 
+import javax.validation.constraints.NotBlank;
+
 import java.util.Random;
 
 public class Rider {
-
+  @NotBlank
     private String name;
     private int experience;
 

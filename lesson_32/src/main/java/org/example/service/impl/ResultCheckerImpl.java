@@ -1,27 +1,21 @@
 package org.example.service.impl;
 
 import org.example.entity.Pair;
-import org.example.entity.PairComparator;
 import org.example.service.ResultChecker;
 import org.springframework.stereotype.Service;
 
 
+import java.util.Comparator;
 import java.util.List;
 @Service
 public class ResultCheckerImpl implements ResultChecker {
-    @Override
-    public List<Pair> getResult(List<Pair> participants) {
 
-        participants.sort(new PairComparator());
-
-        return participants;
-    }
 
     @Override
     public boolean isWinner(List<Pair> participants, Pair chosen) {
-        List<Pair> pairs=getResult(participants);
-        return chosen.equals(pairs.get(0));
+
+        Pair pair = participants.stream().max((Pair o1, Pair o2) -> o2.getPairSpeed() - o1.getPairSpeed()).get();
+
+        return chosen.equals(pair);
     }
-
-
 }

@@ -1,60 +1,44 @@
 package org.example.config;
 
-import org.example.entity.Horse;
-import org.example.entity.Pair;
-import org.example.entity.Rider;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import java.util.Locale;
 
 @Configuration
 @EnableAspectJAutoProxy
+@EnableWebMvc
 public class AppConfig {
+  @Bean
+  public ViewResolver viewResolver() {
+    InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+    viewResolver.setPrefix("/");
+    viewResolver.setSuffix(".jsp");
+    return viewResolver;
+  }
 
-    @Bean
-    Horse horseMagic() {
-        return new Horse("Magic");
-    }
+  @Bean
+  public  LocaleResolver localeResolver(){
+    SessionLocaleResolver localeResolver = new SessionLocaleResolver();
+    localeResolver.setDefaultLocale(new Locale("en","UK"));
+    return localeResolver;
+  }
 
-    @Bean
-    Horse horseSpirit() {
-        return new Horse("Spirit");
-    }
+  @Bean
+  public MessageSource messageSource(){
+    ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
+    messageSource.setBasename("classpath:messages");
+    messageSource.setDefaultEncoding("UTF-8");
+    return messageSource;
+  }
 
-    @Bean
-    Horse horseCopper() {
-        return new Horse("Copper");
-    }
-
-    @Bean
-    Rider riderJohn() {
-        return new Rider("John");
-    }
-
-    @Bean
-    Rider riderJim() {
-        return new Rider("Jim");
-    }
-
-    @Bean
-    Rider riderHarry() {
-        return new Rider("Harry");
-    }
-
-    @Bean
-    Pair pair1(@Qualifier("horseMagic") Horse horse, @Qualifier("riderHarry") Rider rider) {
-        return new Pair(horse, rider);
-    }
-
-    @Bean
-    Pair pair2(@Qualifier("horseCopper") Horse horse, @Qualifier("riderJim") Rider rider) {
-        return new Pair(horse, rider);
-    }
-
-    @Bean
-    Pair pair3(@Qualifier("horseSpirit") Horse horse, @Qualifier("riderJohn") Rider rider) {
-        return new Pair(horse, rider);
-    }
 
 }

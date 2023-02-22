@@ -5,12 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cf26139-ad4f-4289-a712-651e9d5fceb3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_01_2023_07_351/shelved.patch" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/PairService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/NoSuchPairException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/PairServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2023_07_45.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2023_07_45/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_02_2023_07_59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_02_2023_07_59/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_02_2023_09_08.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_02_2023_09_08/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/aop/RaceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/aop/RaceAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/entity/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/entity/Bet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/ShowError.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/ErrorResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/GameServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/GameServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/ShowErrorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/ErrorResultImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/web/RaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/web/RaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/webapp/race.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/webapp/race.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/org/example/config/DispatcherConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/org/example/config/DispatcherConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/org/example/web/CarResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/org/example/web/CarResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +71,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Jsp File" />
         <option value="Enum" />
+        <option value="spring-beans.schema" />
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -67,7 +82,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson_34" />
+        <entry key="$PROJECT_DIR$" value="Lesson_35" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,68 +101,52 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2IqcjaWTyw0stZ0GwskPoSjZNQU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "F:/tms/tms/lesson_32",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
-    "spring.configuration.checksum": "767f317534b42b7a93529e5a4a25d89c"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;14&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/tms/tms/spring-web/src/main/webapp/WEB-INF/lib&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.097751714&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.47562298&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;c79006cfa1775a5cb053d293763ccc92&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.service.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\tms\tms\spring-web\src\main\webapp\WEB-INF\lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\tms\tms\spring-web\src\main\webapp" />
+      <recent name="F:\tms\tms\spring-web\src\main\webapp\WEB-INF" />
       <recent name="F:\tms\tms\lesson_29_command\src\main\java\org\example" />
       <recent name="F:\tms\tms\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (5)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="tms.lesson_29_abstract_factory.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="tms.lesson_29_observer.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.70">
     <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="tms.lesson_29_prototype.main" />
@@ -187,20 +186,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tests in 'tms.spring-web'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":spring-web:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="tms [war]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="war" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="Tomcat 9.0.70" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/garage" />
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="HOT_SWAP_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/race" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="Gradle : org.example : tms-1.0.war">
+        <artifact name="Gradle : org.example : lesson_32-1.0.war">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="1893390d-bf44-4423-bc54-92d287d511b4" />
+        <option name="BASE_DIRECTORY_NAME" value="2d5cf653-486d-4cbe-9fb9-a8a5ec5f201d" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -208,7 +247,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50245" />
+        <option name="DEBUG_PORT" value="57430" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -273,25 +312,25 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="Gradle : org.example : tms-1.0.war" />
+          <artifact name="Gradle : org.example : lesson_32-1.0.war" />
         </option>
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main (2)" />
       <item itemvalue="Application.Main (3)" />
       <item itemvalue="Application.Main (4)" />
       <item itemvalue="Application.Main (5)" />
-      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Gradle.Tests in 'tms.spring-web'" />
+      <item itemvalue="Gradle.tms [war]" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.70" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.tms [war]" />
+        <item itemvalue="Gradle.Tests in 'tms.spring-web'" />
         <item itemvalue="Application.Main (5)" />
         <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -321,7 +360,21 @@
       <workItem from="1673684700019" duration="3603000" />
       <workItem from="1673689983791" duration="10121000" />
       <workItem from="1673768780752" duration="13070000" />
-      <workItem from="1676353574565" duration="1339000" />
+      <workItem from="1676353574565" duration="2208000" />
+      <workItem from="1676394353689" duration="3875000" />
+      <workItem from="1676434933484" duration="2630000" />
+      <workItem from="1676476272857" duration="1768000" />
+      <workItem from="1676478056154" duration="512000" />
+      <workItem from="1676478580234" duration="5194000" />
+      <workItem from="1676520623939" duration="3876000" />
+      <workItem from="1676608148469" duration="3952000" />
+      <workItem from="1676718200655" duration="3368000" />
+      <workItem from="1676740172684" duration="6156000" />
+      <workItem from="1676787074400" duration="28225000" />
+      <workItem from="1676953576373" duration="6353000" />
+      <workItem from="1676978700760" duration="2401000" />
+      <workItem from="1677004206099" duration="5897000" />
+      <workItem from="1677041004444" duration="1727000" />
     </task>
     <task id="LOCAL-00001" summary="lesson23">
       <created>1671382719234</created>
@@ -386,7 +439,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676353671951</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lesson 34.01">
+      <created>1676355124493</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676355124493</updated>
+    </task>
+    <task id="LOCAL-00011" summary="lesson 36">
+      <created>1676813341283</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676813341283</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,6 +471,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="lesson23" />
     <MESSAGE value="lesson23.2" />
     <MESSAGE value="lesson23.3" />
@@ -413,9 +481,19 @@
     <MESSAGE value="lesson27.3 with singleton" />
     <MESSAGE value="lesson29" />
     <MESSAGE value="lesson 34.01" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 34.01" />
+    <MESSAGE value="lesson 36" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 36" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-web/src/main/java/org/example/web/CarResource.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.lang.String" memberName="hash" />
