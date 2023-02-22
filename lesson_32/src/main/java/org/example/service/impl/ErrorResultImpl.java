@@ -1,5 +1,6 @@
 package org.example.service.impl;
 
+import org.example.service.ErrorResult;
 import org.example.service.ShowError;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
@@ -11,9 +12,9 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class ShowErrorImpl implements ShowError {
+public class ErrorResultImpl implements ErrorResult {
     @Override
-    public ModelAndView show(BindingResult result) {
+    public ModelAndView get(BindingResult result) {
         ModelAndView modelAndView = new ModelAndView("race");
         Map<String, String> errors = new HashMap<>();
         List<FieldError> fieldErrors = result.getFieldErrors();

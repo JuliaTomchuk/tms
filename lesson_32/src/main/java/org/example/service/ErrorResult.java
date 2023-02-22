@@ -3,7 +3,7 @@ package org.example.service;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 
-public interface ShowError {
+public interface ErrorResult {
 
     ModelAndView show(BindingResult result);
 }
