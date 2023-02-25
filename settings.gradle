@@ -10,4 +10,5 @@ include 'lesson_32:untitled'
 findProject(':lesson_32:untitled')?.name = 'untitled'
 include 'spring-web'
 include 'spring-web'
+include 'hibernate'
 

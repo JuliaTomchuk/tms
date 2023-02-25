@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cf26139-ad4f-4289-a712-651e9d5fceb3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/PairService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/NoSuchPairException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/PairServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2023_07_45.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_02_2023_07_45/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_02_2023_07_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_02_2023_07_59/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_02_2023_09_08.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_14_02_2023_09_08/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/entity/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/entity/Bet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/ShowError.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/ErrorResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/GameServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/GameServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/ShowErrorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/service/impl/ErrorResultImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/web/RaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/java/org/example/web/RaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_32/src/main/webapp/race.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_32/src/main/webapp/race.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-web/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/org/example/config/DispatcherConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/org/example/config/DispatcherConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-web/src/main/java/org/example/web/CarResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-web/src/main/java/org/example/web/CarResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,9 +52,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Enum" />
         <option value="spring-beans.schema" />
         <option value="Jsp File" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -107,31 +88,31 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;14&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/tms/tms/spring-web/src/main/webapp/WEB-INF/lib&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.097751714&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.47562298&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;c79006cfa1775a5cb053d293763ccc92&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "F:/tms/tms",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.097751714",
+    "project.structure.side.proportion": "0.47562298",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "spring.configuration.checksum": "c79006cfa1775a5cb053d293763ccc92"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.service.impl" />
@@ -146,20 +127,7 @@
       <recent name="F:\tms\tms\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.70">
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="tms.lesson_29_prototype.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="tms.chain.main" />
@@ -176,6 +144,19 @@
     <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="tms.lesson_29_command.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="tms.hibernate.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
@@ -317,7 +298,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main (3)" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (4)" />
       <item itemvalue="Application.Main (5)" />
       <item itemvalue="Gradle.Tests in 'tms.spring-web'" />
@@ -326,11 +307,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.tms [war]" />
         <item itemvalue="Gradle.Tests in 'tms.spring-web'" />
         <item itemvalue="Application.Main (5)" />
         <item itemvalue="Application.Main (4)" />
-        <item itemvalue="Application.Main (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -374,7 +355,9 @@
       <workItem from="1676953576373" duration="6353000" />
       <workItem from="1676978700760" duration="2401000" />
       <workItem from="1677004206099" duration="5897000" />
-      <workItem from="1677041004444" duration="1727000" />
+      <workItem from="1677041004444" duration="2661000" />
+      <workItem from="1677093760096" duration="673000" />
+      <workItem from="1677336338308" duration="12128000" />
     </task>
     <task id="LOCAL-00001" summary="lesson23">
       <created>1671382719234</created>
@@ -453,7 +436,28 @@
       <option name="project" value="LOCAL" />
       <updated>1676813341283</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="lesson 36.01">
+      <created>1677044214994</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1677044214994</updated>
+    </task>
+    <task id="LOCAL-00013" summary="lesson 36.02">
+      <created>1677044378593</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1677044378593</updated>
+    </task>
+    <task id="LOCAL-00014" summary="lesson 38">
+      <created>1677349661646</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1677349661646</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +486,10 @@
     <MESSAGE value="lesson29" />
     <MESSAGE value="lesson 34.01" />
     <MESSAGE value="lesson 36" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 36" />
+    <MESSAGE value="lesson 36.01" />
+    <MESSAGE value="lesson 36.02" />
+    <MESSAGE value="lesson 38" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 38" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
