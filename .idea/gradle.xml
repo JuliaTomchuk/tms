@@ -11,6 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/chain" />
+            <option value="$PROJECT_DIR$/hibernate" />
             <option value="$PROJECT_DIR$/lesson_29" />
             <option value="$PROJECT_DIR$/lesson_29_abstract_factory" />
             <option value="$PROJECT_DIR$/lesson_29_builder" />
