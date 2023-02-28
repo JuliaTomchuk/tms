@@ -3,44 +3,40 @@ package org.example.service.impl;
 import lombok.AllArgsConstructor;
 import org.example.domain.CourseEntity;
 import org.example.service.CourseService;
+import org.example.service.DAOService;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class CourseServiceImpl implements CourseService {
-    private SessionFactory sessionFactory;
+public class CourseServiceImpl extends DAOService  implements CourseService {
+
 
     @Override
     public void save(CourseEntity courseEntity) {
 
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
+        Session session = getSession();
         session.save(courseEntity);
-        transaction.commit();
-        session.close();
+        closeSession(session);
 
     }
 
+
+
     @Override
-    public CourseEntity get(int id) {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
+    public CourseEntity get(Integer id) {
+        Session session = getSession();
         CourseEntity courseEntity = session.get(CourseEntity.class, id);
-        transaction.commit();
-        session.close();
+        closeSession(session);
         return courseEntity;
     }
 
     @Override
-    public void delete(int id) {
-        CourseEntity courseEntity = get(id);
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
+    public void delete(Integer id) {
+        Session session = getSession();
+        CourseEntity courseEntity = session.get(CourseEntity.class, id);
         session.delete(courseEntity);
-        transaction.commit();
+        closeSession(session);
         session.close();
 
 

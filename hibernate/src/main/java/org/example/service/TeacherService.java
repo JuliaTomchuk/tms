@@ -4,7 +4,7 @@ import org.example.domain.TeacherEntity;
 
 public interface TeacherService {
     void save(TeacherEntity teacher);
-    TeacherEntity get(int id);
-    void delete (int id);
+    TeacherEntity get(Integer id);
+    void delete (Integer id);
 
 }

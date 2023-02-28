@@ -2,44 +2,38 @@ package org.example.service.impl;
 
 import lombok.AllArgsConstructor;
 import org.example.domain.TeacherEntity;
+import org.example.service.DAOService;
 import org.example.service.TeacherService;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class TeacherServiceImpl implements TeacherService {
-    SessionFactory sessionFactory;
+public class TeacherServiceImpl extends DAOService implements TeacherService {
+
 
     @Override
     public void save(TeacherEntity teacher) {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
+        Session session = getSession();
         session.save(teacher);
-        transaction.commit();
+        closeSession(session);
         session.close();
     }
 
     @Override
-    public TeacherEntity get(int id) {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
+    public TeacherEntity get(Integer id) {
+        Session session = getSession();
         TeacherEntity teacher = session.get(TeacherEntity.class, id);
-        transaction.commit();
-        session.close();
+        closeSession(session);
         return teacher;
     }
 
     @Override
-    public void delete(int id) {
-        TeacherEntity teacher = get(id);
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
+    public void delete(Integer id) {
+        Session session = getSession();
+        TeacherEntity teacher = session.get(TeacherEntity.class,id);
         session.delete(teacher);
-        transaction.commit();
-        session.close();
+        closeSession(session);
 
 
     }

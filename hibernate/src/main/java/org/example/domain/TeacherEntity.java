@@ -20,7 +20,7 @@ import java.time.LocalDate;
 public class TeacherEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String name;
     private LocalDate birthday;
     @OneToOne(mappedBy = "teacher")

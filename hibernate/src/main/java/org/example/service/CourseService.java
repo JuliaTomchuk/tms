@@ -5,7 +5,7 @@ import org.example.domain.CourseEntity;
 public interface CourseService {
     void save(CourseEntity courseEntity);
 
-    CourseEntity get(int id);
+    CourseEntity get(Integer id);
 
-    void delete(int id);
+    void delete(Integer id);
 }

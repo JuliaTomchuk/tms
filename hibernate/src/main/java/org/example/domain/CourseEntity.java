@@ -24,7 +24,7 @@ import javax.persistence.Table;
 public class CourseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String name;
     @Enumerated(EnumType.STRING)
     private CourseType type;
