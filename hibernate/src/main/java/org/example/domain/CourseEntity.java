@@ -47,7 +47,7 @@ public class CourseEntity {
 
 
     @LazyCollection(LazyCollectionOption.FALSE)
-    @ManyToMany(cascade = CascadeType.PERSIST, mappedBy = "courses")
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "courses")
     private List<StudentEntity> students;
 
 
