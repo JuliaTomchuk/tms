@@ -4,7 +4,6 @@ import org.example.domain.CourseEntity;
 import org.example.domain.StudentEntity;
 import org.example.domain.TeacherEntity;
 import org.example.factory.EntityFactory;
-import org.example.service.CourseService;
 import org.example.service.StudentService;
 import org.example.service.TeacherService;
 import org.springframework.context.ApplicationContext;
@@ -24,11 +23,6 @@ public class Main {
         CourseEntity course3 = entityFactory.createCourse();
 
         TeacherService teacherService = context.getBean(TeacherService.class);
-        CourseService courseService = context.getBean(CourseService.class);
-
-        courseService.save(course1);
-        courseService.save(course2);
-        courseService.save(course3);
 
         teacher1.setCourses(List.of(course1, course2, course3));
         teacherService.save(teacher1);
