@@ -37,7 +37,7 @@ public class StudentEntity {
     private String name;
     @ToString.Exclude
     @LazyCollection(LazyCollectionOption.FALSE)
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.PERSIST)
     private List<CourseEntity> courses;
 
 

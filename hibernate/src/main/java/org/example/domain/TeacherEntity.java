@@ -39,7 +39,7 @@ public class TeacherEntity {
     private Long insuranceNumber;
     private String name;
     private LocalDate birthday;
-    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.PERSIST)
     private List<CourseEntity> courses;
 
 
