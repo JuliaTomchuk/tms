@@ -2,14 +2,14 @@ package org.example.service.impl;
 
 import lombok.AllArgsConstructor;
 import org.example.domain.TeacherEntity;
-import org.example.service.DAOService;
+import org.example.service.SessionService;
 import org.example.service.TeacherService;
 import org.hibernate.Session;
 import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class TeacherServiceImpl extends DAOService implements TeacherService {
+public class TeacherServiceImpl extends SessionService implements TeacherService {
 
 
     @Override

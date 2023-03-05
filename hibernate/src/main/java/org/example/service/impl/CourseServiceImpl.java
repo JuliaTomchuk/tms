@@ -1,15 +1,13 @@
 package org.example.service.impl;
 
-import lombok.AllArgsConstructor;
 import org.example.domain.CourseEntity;
 import org.example.service.CourseService;
-import org.example.service.DAOService;
+import org.example.service.SessionService;
 import org.hibernate.Session;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
-public class CourseServiceImpl extends DAOService  implements CourseService {
+public class CourseServiceImpl extends SessionService implements CourseService {
 
 
     @Override
@@ -20,7 +18,6 @@ public class CourseServiceImpl extends DAOService  implements CourseService {
         closeSession(session);
 
     }
-
 
 
     @Override

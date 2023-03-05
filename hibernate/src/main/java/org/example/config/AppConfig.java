@@ -1,6 +1,7 @@
 package org.example.config;
 
 import org.example.domain.CourseEntity;
+import org.example.domain.StudentEntity;
 import org.example.domain.TeacherEntity;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Environment;
@@ -28,6 +29,7 @@ public class AppConfig {
         configuration.addProperties(properties);
         configuration.addAnnotatedClass(TeacherEntity.class);
         configuration.addAnnotatedClass(CourseEntity.class);
+        configuration.addAnnotatedClass(StudentEntity.class);
         return configuration.buildSessionFactory();
 
     }
