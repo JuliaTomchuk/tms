@@ -1,18 +1,18 @@
-package org.example.factory.impl;
+package org.example.creator.impl;
 
 import org.example.domain.CourseEntity;
 import org.example.domain.CourseSchedule;
 import org.example.domain.CourseType;
 import org.example.domain.StudentEntity;
 import org.example.domain.TeacherEntity;
-import org.example.factory.EntityFactory;
+import org.example.creator.EntitySampleCreator;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.Random;
 
 @Service
-public class EntityFactoryImpl implements EntityFactory {
+public class EntitySampleCreatorImpl implements EntitySampleCreator {
     private Random random = new Random();
 
     @Override

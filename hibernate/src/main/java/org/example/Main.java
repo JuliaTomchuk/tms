@@ -3,7 +3,7 @@ package org.example;
 import org.example.domain.CourseEntity;
 import org.example.domain.StudentEntity;
 import org.example.domain.TeacherEntity;
-import org.example.factory.EntityFactory;
+import org.example.creator.EntitySampleCreator;
 import org.example.service.StudentService;
 import org.example.service.TeacherService;
 import org.springframework.context.ApplicationContext;
@@ -15,7 +15,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext("org.example");
-        EntityFactory entityFactory = context.getBean(EntityFactory.class);
+        EntitySampleCreator entityFactory = context.getBean(EntitySampleCreator.class);
 
         TeacherEntity teacher1 = entityFactory.createTeacher();
         CourseEntity course1 = entityFactory.createCourse();

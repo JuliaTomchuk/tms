@@ -17,6 +17,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -38,7 +39,7 @@ public class StudentEntity {
     @ToString.Exclude
     @LazyCollection(LazyCollectionOption.FALSE)
     @ManyToMany(cascade = CascadeType.ALL)
-    private List<CourseEntity> courses;
+    private List<CourseEntity> courses = new ArrayList<>();
 
 
     @Override

@@ -46,14 +46,7 @@ public class StudentServiceImpl extends SessionService implements StudentService
             session.save(course);
         }
 
-        List<CourseEntity> courses = student.getCourses();
-        if (courses != null) {
-            courses.add(course);
-        } else {
-            courses = new ArrayList<>();
-            courses.add(course);
-        }
-        student.setCourses(courses);
+        student.getCourses().add(course);
         session.update(student);
 
         closeSession(session);
@@ -63,11 +56,8 @@ public class StudentServiceImpl extends SessionService implements StudentService
     @Override
     public void deleteStudentFromCourse(StudentEntity student, CourseEntity course) {
         Session session = getSession();
-        List<CourseEntity> courses = student.getCourses();
-        courses.remove(course);
-        student.setCourses(courses);
+        student.getCourses().remove(course);
         session.update(student);
-
         closeSession(session);
 
 
