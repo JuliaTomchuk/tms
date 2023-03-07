@@ -15,6 +15,7 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -45,9 +46,7 @@ public class CourseEntity {
     @Embedded
     private CourseSchedule schedule;
 
-
-    @LazyCollection(LazyCollectionOption.FALSE)
-    @ManyToMany( mappedBy = "courses",cascade = CascadeType.ALL)
+    @ManyToMany( mappedBy = "courses",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<StudentEntity> students;
 
 
