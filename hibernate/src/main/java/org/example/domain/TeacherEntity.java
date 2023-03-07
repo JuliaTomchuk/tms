@@ -7,6 +7,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.CascadeType;
@@ -39,7 +42,8 @@ public class TeacherEntity {
     private Long insuranceNumber;
     private String name;
     private LocalDate birthday;
-   @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<CourseEntity> courses;
 
 
