@@ -7,5 +7,6 @@ public interface TeacherService {
 
     TeacherEntity get(Integer id);
 
-    void delete(Integer id);
+    boolean delete(Integer id);
+
 }

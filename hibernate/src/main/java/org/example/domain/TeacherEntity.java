@@ -7,9 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.CascadeType;
@@ -22,8 +19,9 @@ import javax.persistence.OneToMany;
 
 import javax.persistence.Table;
 import java.time.LocalDate;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 
 @Setter
@@ -42,9 +40,17 @@ public class TeacherEntity {
     private Long insuranceNumber;
     private String name;
     private LocalDate birthday;
-    @LazyCollection(LazyCollectionOption.FALSE)
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<CourseEntity> courses;
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE,CascadeType.REFRESH},fetch = FetchType.EAGER)
+    private Set<CourseEntity> courses = new HashSet<>();
+
+    public void addCourse(CourseEntity course){
+        courses.add(course);
+        course.setTeacher(this);
+    }
+    public void deleteCourse(CourseEntity course){
+        courses.remove(course);
+        course.setTeacher(null);
+    }
 
 
     @Override

@@ -7,5 +7,5 @@ public interface CourseService {
 
     CourseEntity get(Integer id);
 
-    void delete(Integer id);
+    boolean delete(Integer id);
 }

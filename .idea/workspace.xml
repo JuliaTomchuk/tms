@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6cf26139-ad4f-4289-a712-651e9d5fceb3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/domain/CourseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/domain/CourseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/domain/StudentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/domain/StudentEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/domain/TeacherEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/domain/TeacherEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/impl/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/impl/CourseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/impl/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/impl/TeacherServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -368,6 +377,9 @@
       <workItem from="1678022794766" duration="6186000" />
       <workItem from="1678078466057" duration="2101000" />
       <workItem from="1678162467419" duration="1972000" />
+      <workItem from="1678215549868" duration="1349000" />
+      <workItem from="1678256498914" duration="618000" />
+      <workItem from="1678276467612" duration="9699000" />
     </task>
     <task id="LOCAL-00001" summary="lesson23">
       <created>1671382719234</created>
@@ -569,6 +581,7 @@
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.lang.String" memberName="hash" />
+        <PinnedItemInfo parentTag="org.example.domain.StudentEntity" memberName="courses" />
         <PinnedItemInfo parentTag="java.lang.String" memberName="hashIsZero" />
       </pinned-members>
     </pin-to-top-manager>

@@ -6,8 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.CascadeType;
@@ -20,10 +18,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 
 @ToString
@@ -46,9 +45,21 @@ public class CourseEntity {
     private boolean availableForEnrolling;
     @Embedded
     private CourseSchedule schedule;
-    @LazyCollection(LazyCollectionOption.FALSE)
-    @ManyToMany( mappedBy = "courses",cascade = CascadeType.ALL)
-    private List<StudentEntity> students= new ArrayList<>();
+    @ManyToOne
+    @ToString.Exclude
+    private TeacherEntity teacher;
+    @ManyToMany( mappedBy = "courses",cascade = {CascadeType.PERSIST, CascadeType.MERGE,CascadeType.REFRESH},fetch = FetchType.EAGER)
+    private Set<StudentEntity> students= new HashSet<>();
+
+    public void addStudent(StudentEntity student){
+        students.add(student);
+        student.getCourses().add(this);
+    }
+
+    public void deleteStudent(StudentEntity student){
+         students.remove(student);
+        student.getCourses().remove(this);
+    }
 
 
     @Override

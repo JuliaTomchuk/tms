@@ -6,61 +6,68 @@ import org.example.service.SessionService;
 import org.example.service.StudentService;
 import org.hibernate.Session;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentServiceImpl extends SessionService implements StudentService {
     @Override
     public void save(StudentEntity student) {
         Session session = getSession();
-        session.save(student);
+        session.persist(student);
         closeSession(session);
     }
 
     @Override
     public StudentEntity get(Integer id) {
         Session session = getSession();
-        StudentEntity student = session.get(StudentEntity.class, id);
+        Optional <StudentEntity> studentOptional = Optional.ofNullable(session.get(StudentEntity.class, id));
         closeSession(session);
-        return student;
+        return studentOptional.orElse(new StudentEntity());
     }
 
     @Override
-    public void delete(Integer id) {
+    public boolean delete(Integer id) {
         Session session = getSession();
-        StudentEntity student = session.get(StudentEntity.class, id);
-        session.delete(student);
-        closeSession(session);
-
-    }
-
-    @Override
-    public void addStudentToCourse(StudentEntity student, CourseEntity course) {
-        Session session = getSession();
-        if (student.getId() == null) {
-            session.save(student);
+        boolean isDeleted=false;
+        Optional <StudentEntity> studentOptional = Optional.ofNullable(session.get(StudentEntity.class, id));
+        if(studentOptional.isPresent()){
+            StudentEntity student = studentOptional.get();
+            session.delete(student);
+            isDeleted=true;
         }
-        if (course.getId() == null) {
-            session.save(course);
-        }
-
-        student.getCourses().add(course);
-        session.update(student);
-
-        closeSession(session);
-
+          closeSession(session);
+        return isDeleted;
     }
 
     @Override
-    public void deleteStudentFromCourse(StudentEntity student, CourseEntity course) {
+    public boolean addStudentToCourse(Integer studentId, Integer courseId) {
+        boolean isAdded =false;
         Session session = getSession();
-        student.getCourses().remove(course);
-        session.update(student);
+        Optional <StudentEntity> studentOptional = Optional.ofNullable(session.get(StudentEntity.class, studentId));
+        Optional <CourseEntity> courseOptional = Optional.ofNullable(session.get(CourseEntity.class,courseId));
+        if(studentOptional.isPresent()&&courseOptional.isPresent()){
+            courseOptional.get().addStudent(studentOptional.get());
+            isAdded=true;
+        }
+
         closeSession(session);
+        return isAdded;
+    }
 
+    @Override
+    public boolean deleteStudentFromCourse(Integer studentId, Integer courseId) {
+        boolean isDeleted= false;
+        Session session = getSession();
+        Optional <StudentEntity> studentOptional = Optional.ofNullable(session.get(StudentEntity.class, studentId));
+        Optional <CourseEntity> courseOptional = Optional.ofNullable(session.get(CourseEntity.class,courseId));
 
+        if(studentOptional.isPresent()&&courseOptional.isPresent()){
+            courseOptional.get().deleteStudent(studentOptional.get());
+            isDeleted = true;
+        }
+
+        closeSession(session);
+        return isDeleted;
     }
 
 
