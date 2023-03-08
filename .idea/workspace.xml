@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cf26139-ad4f-4289-a712-651e9d5fceb3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca226370-0658-4e3f-8db4-5893c9f05fcd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca226370-0658-4e3f-8db4-5893c9f05fcd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernate/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/domain/CourseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/domain/CourseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/domain/StudentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/domain/StudentEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/domain/TeacherEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/domain/TeacherEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/impl/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/impl/CourseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/impl/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate/src/main/java/org/example/service/impl/TeacherServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,15 +64,15 @@
         <option value="spring-beans.schema" />
         <option value="Jsp File" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson_35" />
+        <entry key="$PROJECT_DIR$" value="Lesson_36" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -102,7 +109,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.097751714&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.47562298&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;3600ed4acab5d012b262cce8d15e4d19&quot;
+    &quot;spring.configuration.checksum&quot;: &quot;8a202a4f0217dbee8646873c65bd09b9&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -117,6 +124,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.factory.impl" />
       <recent name="org.example.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -363,6 +371,15 @@
       <workItem from="1677428585092" duration="45000" />
       <workItem from="1677441609247" duration="1212000" />
       <workItem from="1677558715212" duration="3272000" />
+      <workItem from="1677813138071" duration="10530000" />
+      <workItem from="1677998341318" duration="3259000" />
+      <workItem from="1678006343949" duration="15846000" />
+      <workItem from="1678022794766" duration="6186000" />
+      <workItem from="1678078466057" duration="2101000" />
+      <workItem from="1678162467419" duration="1972000" />
+      <workItem from="1678215549868" duration="1349000" />
+      <workItem from="1678256498914" duration="618000" />
+      <workItem from="1678276467612" duration="9699000" />
     </task>
     <task id="LOCAL-00001" summary="lesson23">
       <created>1671382719234</created>
@@ -469,7 +486,49 @@
       <option name="project" value="LOCAL" />
       <updated>1677349810428</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="lesson 40">
+      <created>1678025562364</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678025562364</updated>
+    </task>
+    <task id="LOCAL-00017" summary="lesson 40.01">
+      <created>1678038093241</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678038093241</updated>
+    </task>
+    <task id="LOCAL-00018" summary="lesson 40.02">
+      <created>1678038736236</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1678038736236</updated>
+    </task>
+    <task id="LOCAL-00019" summary="lesson 40.03">
+      <created>1678040586316</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1678040586316</updated>
+    </task>
+    <task id="LOCAL-00020" summary="lesson 40.04">
+      <created>1678079959996</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1678079959996</updated>
+    </task>
+    <task id="LOCAL-00021" summary="lesson 40.05">
+      <created>1678163879289</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1678163879289</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +560,13 @@
     <MESSAGE value="lesson 36.01" />
     <MESSAGE value="lesson 36.02" />
     <MESSAGE value="lesson 38" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 38" />
+    <MESSAGE value="lesson 40" />
+    <MESSAGE value="lesson 40.01" />
+    <MESSAGE value="lesson 40.02" />
+    <MESSAGE value="lesson 40.03" />
+    <MESSAGE value="lesson 40.04" />
+    <MESSAGE value="lesson 40.05" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 40.05" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -516,6 +581,7 @@
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.lang.String" memberName="hash" />
+        <PinnedItemInfo parentTag="org.example.domain.StudentEntity" memberName="courses" />
         <PinnedItemInfo parentTag="java.lang.String" memberName="hashIsZero" />
       </pinned-members>
     </pin-to-top-manager>

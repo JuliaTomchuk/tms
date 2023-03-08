@@ -1,44 +1,47 @@
 package org.example.service.impl;
 
-import lombok.AllArgsConstructor;
 import org.example.domain.CourseEntity;
 import org.example.service.CourseService;
-import org.example.service.DAOService;
+import org.example.service.SessionService;
 import org.hibernate.Session;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
-@AllArgsConstructor
-public class CourseServiceImpl extends DAOService  implements CourseService {
+public class CourseServiceImpl extends SessionService implements CourseService {
 
 
     @Override
     public void save(CourseEntity courseEntity) {
 
         Session session = getSession();
-        session.save(courseEntity);
+        session.persist(courseEntity);
         closeSession(session);
 
     }
-
 
 
     @Override
     public CourseEntity get(Integer id) {
         Session session = getSession();
-        CourseEntity courseEntity = session.get(CourseEntity.class, id);
+       Optional<CourseEntity> courseEntity = Optional.ofNullable(session.get(CourseEntity.class, id));
         closeSession(session);
-        return courseEntity;
+        return courseEntity.orElse(new CourseEntity());
     }
 
     @Override
-    public void delete(Integer id) {
+    public boolean delete(Integer id) {
         Session session = getSession();
-        CourseEntity courseEntity = session.get(CourseEntity.class, id);
-        session.delete(courseEntity);
+        boolean isDeleted=false;
+        Optional <CourseEntity> courseOptional = Optional.ofNullable(session.get(CourseEntity.class, id));
+        if(courseOptional.isPresent()){
+            CourseEntity course = courseOptional.get();
+        session.delete(course);
+        isDeleted=true;
+        }
         closeSession(session);
         session.close();
-
-
+        return isDeleted;
     }
 }
