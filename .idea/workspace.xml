@@ -387,7 +387,7 @@
       <workItem from="1678215549868" duration="1349000" />
       <workItem from="1678256498914" duration="618000" />
       <workItem from="1678276467612" duration="10348000" />
-      <workItem from="1678528269839" duration="15681000" />
+      <workItem from="1678528269839" duration="16219000" />
     </task>
     <task id="LOCAL-00001" summary="lesson23">
       <created>1671382719234</created>
@@ -543,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678286455530</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="spring-boot">
+      <created>1678563283236</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1678563283236</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +589,8 @@
     <MESSAGE value="lesson 40.04" />
     <MESSAGE value="lesson 40.05" />
     <MESSAGE value="lesson 40.06" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 40.06" />
+    <MESSAGE value="spring-boot" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring-boot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
