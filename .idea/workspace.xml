@@ -69,7 +69,8 @@
         <entry key="$PROJECT_DIR$" value="Lesson_40" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/counter" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/demo" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -81,12 +82,20 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2IqcjaWTyw0stZ0GwskPoSjZNQU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
   </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -106,7 +115,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.097751714",
     "project.structure.side.proportion": "0.47562298",
-    "settings.editor.selected.configurable": "File.Encoding",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "8a202a4f0217dbee8646873c65bd09b9"
   },
   "keyToStringList": {
@@ -225,6 +234,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Lesson42SpringBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="lesson_42_spring-boot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.lesson_42_springboot.Lesson42SpringBootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.70" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/race" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -319,6 +335,7 @@
       <item itemvalue="Application.Main (5)" />
       <item itemvalue="Gradle.Tests in 'tms.spring-web'" />
       <item itemvalue="Gradle.tms [war]" />
+      <item itemvalue="Spring Boot.Lesson42SpringBootApplication" />
       <item itemvalue="Spring Boot.CounterApplication" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.70" />
     </list>
@@ -333,6 +350,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6cf26139-ad4f-4289-a712-651e9d5fceb3" name="Changes" comment="" />
@@ -569,6 +589,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/counter" />
+    </ignored-roots>
     <MESSAGE value="lesson23" />
     <MESSAGE value="lesson23.2" />
     <MESSAGE value="lesson23.3" />
@@ -618,7 +641,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/counter/src/main/java/org/tms/counter/CounterApplication.java</url>
           <line>12</line>
-          <properties class="org.tms.counter.CounterApplication" method="devCounterService">
+          <properties class="org.tms.counter.CounterApplication" method="counterService">
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="28" />
