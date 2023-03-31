@@ -21,6 +21,8 @@
             <option value="$PROJECT_DIR$/lesson_32" />
             <option value="$PROJECT_DIR$/lesson_32/untitled" />
             <option value="$PROJECT_DIR$/spring-web" />
+            <option value="$PROJECT_DIR$/spring_boot_42_lesson" />
+            <option value="$PROJECT_DIR$/untitled" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -31,6 +33,36 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/counter" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/service1_rest" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../java tools/gradle-7.5.1-all/gradle-7.5.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/service1_rest" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/service2_rest" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../java tools/gradle-7.5.1-all/gradle-7.5.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/service2_rest" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/untitled/lesson-42" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../java tools/gradle-7.5.1-all/gradle-7.5.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/untitled/lesson-42" />
           </set>
         </option>
       </GradleProjectSettings>
