@@ -16,22 +16,24 @@ import java.util.UUID;
 @FeignClient(
         name = "userClient",
         url="http://127.0.0.1:8081",
-        configuration = FeignConfig.class
+        configuration = FeignConfig.class,
+        path = "/employee"
+
 )
 public interface UserClient {
-    @GetMapping("/employee")
+    @GetMapping("")
     public List<Employee> getAll();
 
-    @GetMapping("/employee/{id}")
+    @GetMapping("/{id}")
     public Employee getById(@PathVariable(name="id") UUID id);
 
-    @DeleteMapping("/employee/{id}")
+    @DeleteMapping("/{id}")
     public void delete (@PathVariable(name="id") UUID id );
 
 
-    @PostMapping("/employee")
+    @PostMapping
     public Employee save(@RequestBody Employee employeeDto);
 
-    @PutMapping("/employee")
+    @PutMapping
     public Employee update(@RequestBody Employee employeeDto);
 }

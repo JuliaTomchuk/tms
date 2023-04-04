@@ -33,22 +33,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void delete(UUID id) {
-        repository.findById(id).orElseThrow(NoSuchEmployeeException::new);
-        repository.deleteById(id);
+        repository.findById(id).ifPresentOrElse((e)->{repository.deleteById(id);}
+                ,()->{throw new NoSuchEmployeeException();});
 
     }
 
     @Override
     public EmployeeDto update(EmployeeDto employeeDto) {
-        EmployeeEntity employeeEntity = repository.findById(employeeDto.getId()).stream()
-                .peek(entity -> {
-                    entity.setFirstName(employeeDto.getFirstName());
-                    entity.setSecondName(employeeDto.getSecondName());
-                    entity.setSalary(employeeDto.getSalary());
-                    entity.setInsuranceNumber(employeeDto.getInsuranceNumber());
-                    entity.setJobTitle(employeeDto.getJobTitle());
-                }).findFirst().orElseThrow(NoSuchEmployeeException::new);
-        return mapper.convert(employeeEntity);
+        EmployeeEntity employeeEntity = repository.findById(employeeDto.getId()).orElseThrow(NoSuchEmployeeException::new);
+        return mapper.update(employeeDto,employeeEntity);
     }
 
     @Override

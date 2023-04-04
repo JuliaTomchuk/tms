@@ -31,7 +31,6 @@ public class EmployeeController {
         return service.getAll();
     }
     @GetMapping("/{id}")
-
     public EmployeeDto getById(@PathVariable(name="id")UUID id){
         return service.getById(id);
     }
