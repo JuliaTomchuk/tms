@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    username: postgres
+    password: 14271915
+    url: jdbc:postgresql://localhost:5432/employeeDB
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+server:
+  port: 8081
+

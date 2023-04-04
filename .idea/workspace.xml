@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cf26139-ad4f-4289-a712-651e9d5fceb3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6cf26139-ad4f-4289-a712-651e9d5fceb3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +15,15 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/counter">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/service1_rest">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/service2_rest">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/untitled/lesson-42">
       <ProjectState />
     </projectState>
   </component>
@@ -66,10 +73,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson_40" />
+        <entry key="$PROJECT_DIR$" value="Lesson_47" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/demo" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="LogFilters">
@@ -100,37 +107,42 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "F:/tms/tms",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.097751714",
-    "project.structure.side.proportion": "0.47562298",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "8a202a4f0217dbee8646873c65bd09b9"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/tms/tms&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.097751714&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.47562298&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;6d218c112dd22d1c9623a82d80191129&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.service2_rest.services.impl" />
+      <recent name="com.example.service1_rest.services.impl" />
       <recent name="org.example.factory.impl" />
       <recent name="org.example.service.impl" />
     </key>
@@ -144,10 +156,17 @@
       <recent name="F:\tms\tms\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CounterApplication">
-    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Service2RestApplication">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="tms.chain.main" />
+      <module name="tms.spring_boot_42_lesson.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
@@ -234,9 +253,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Lesson42Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="lesson-42.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.lesson42.Lesson42Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Lesson42SpringBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="lesson_42_spring-boot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.lesson_42_springboot.Lesson42SpringBootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Service1RestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="service1_rest.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.service1_rest.Service1RestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Service2RestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="service2_rest.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.service2_rest.Service2RestApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -330,22 +370,25 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Main (4)" />
       <item itemvalue="Application.Main (5)" />
       <item itemvalue="Gradle.Tests in 'tms.spring-web'" />
       <item itemvalue="Gradle.tms [war]" />
+      <item itemvalue="Spring Boot.Service2RestApplication" />
+      <item itemvalue="Spring Boot.Service1RestApplication" />
+      <item itemvalue="Spring Boot.Lesson42Application" />
       <item itemvalue="Spring Boot.Lesson42SpringBootApplication" />
       <item itemvalue="Spring Boot.CounterApplication" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.70" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.tms [war]" />
         <item itemvalue="Gradle.Tests in 'tms.spring-web'" />
         <item itemvalue="Application.Main (5)" />
-        <item itemvalue="Application.Main (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -408,6 +451,26 @@
       <workItem from="1678256498914" duration="618000" />
       <workItem from="1678276467612" duration="10348000" />
       <workItem from="1678528269839" duration="16219000" />
+      <workItem from="1678606013366" duration="6380000" />
+      <workItem from="1678618110219" duration="766000" />
+      <workItem from="1678723003626" duration="607000" />
+      <workItem from="1678769340434" duration="1290000" />
+      <workItem from="1678941541988" duration="362000" />
+      <workItem from="1680068528619" duration="4190000" />
+      <workItem from="1680108791522" duration="7586000" />
+      <workItem from="1680150604002" duration="18000" />
+      <workItem from="1680151020084" duration="1095000" />
+      <workItem from="1680153071777" duration="2733000" />
+      <workItem from="1680173111676" duration="31000" />
+      <workItem from="1680237578823" duration="9000" />
+      <workItem from="1680237736746" duration="709000" />
+      <workItem from="1680239045168" duration="1965000" />
+      <workItem from="1680258394854" duration="1446000" />
+      <workItem from="1680278357571" duration="10651000" />
+      <workItem from="1680420576860" duration="20000" />
+      <workItem from="1680445426458" duration="713000" />
+      <workItem from="1680496773203" duration="3356000" />
+      <workItem from="1680583005940" duration="1990000" />
     </task>
     <task id="LOCAL-00001" summary="lesson23">
       <created>1671382719234</created>
@@ -570,7 +633,35 @@
       <option name="project" value="LOCAL" />
       <updated>1678563283236</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="lesson 42">
+      <created>1678604536473</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1678604536473</updated>
+    </task>
+    <task id="LOCAL-00025" summary="spring boot">
+      <created>1678605905240</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678605905240</updated>
+    </task>
+    <task id="LOCAL-00026" summary="lesson47">
+      <created>1680288903190</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1680288903190</updated>
+    </task>
+    <task id="LOCAL-00027" summary="lesson47/1">
+      <created>1680585545361</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1680585545361</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,6 +682,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/counter" />
+      <path value="$PROJECT_DIR$/untitled/lesson-42" />
+      <path value="$PROJECT_DIR$/service1_rest" />
+      <path value="$PROJECT_DIR$/service2_rest" />
     </ignored-roots>
     <MESSAGE value="lesson23" />
     <MESSAGE value="lesson23.2" />
@@ -613,38 +707,64 @@
     <MESSAGE value="lesson 40.05" />
     <MESSAGE value="lesson 40.06" />
     <MESSAGE value="spring-boot" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring-boot" />
+    <MESSAGE value="lesson 42" />
+    <MESSAGE value="spring boot" />
+    <MESSAGE value="lesson47" />
+    <MESSAGE value="lesson47/1" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson47/1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spring-web/src/main/java/org/example/web/CarResource.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/counter/src/main/java/org/tms/services/impl/CounterServiceImpl.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/counter/src/main/java/org/tms/services/impl/CounterServiceImpl.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/counter/src/main/java/org/tms/services/impl/CounterServiceImpl.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/counter/src/main/java/org/tms/counter/CounterApplication.java</url>
-          <line>12</line>
-          <properties class="org.tms.counter.CounterApplication" method="counterService">
+          <url>file://$PROJECT_DIR$/service1_rest/src/main/java/com/example/service1_rest/web/EmployeeController.java</url>
+          <line>29</line>
+          <properties class="com.example.service1_rest.web.EmployeeController" method="getAll">
+            <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="28" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/service1_rest/src/main/java/com/example/service1_rest/web/EmployeeController.java</url>
+          <line>33</line>
+          <properties class="com.example.service1_rest.web.EmployeeController" method="getById">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/service1_rest/src/main/java/com/example/service1_rest/web/EmployeeController.java</url>
+          <line>43</line>
+          <properties class="com.example.service1_rest.web.EmployeeController" method="save">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/service1_rest/src/main/java/com/example/service1_rest/web/EmployeeController.java</url>
+          <line>48</line>
+          <properties class="com.example.service1_rest.web.EmployeeController" method="update">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/service1_rest/src/main/java/com/example/service1_rest/web/EmployeeController.java</url>
+          <line>37</line>
+          <properties class="com.example.service1_rest.web.EmployeeController" method="delete">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service1_rest/src/main/java/com/example/service1_rest/web/EmployeeController.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
