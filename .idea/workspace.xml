@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cf26139-ad4f-4289-a712-651e9d5fceb3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service1_rest/src/main/java/com/example/service1_rest/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service1_rest/src/main/java/com/example/service1_rest/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service1_rest/src/main/java/com/example/service1_rest/services/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service1_rest/src/main/java/com/example/service1_rest/services/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service1_rest/src/main/java/com/example/service1_rest/web/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service1_rest/src/main/java/com/example/service1_rest/web/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service2_rest/src/main/java/com/example/service2_rest/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service2_rest/src/main/java/com/example/service2_rest/client/UserClient.java" afterDir="false" />
-    </list>
+    <list default="true" id="6cf26139-ad4f-4289-a712-651e9d5fceb3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +73,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson_42" />
+        <entry key="$PROJECT_DIR$" value="Lesson_47" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -476,7 +470,7 @@
       <workItem from="1680420576860" duration="20000" />
       <workItem from="1680445426458" duration="713000" />
       <workItem from="1680496773203" duration="3356000" />
-      <workItem from="1680583005940" duration="1428000" />
+      <workItem from="1680583005940" duration="1990000" />
     </task>
     <task id="LOCAL-00001" summary="lesson23">
       <created>1671382719234</created>
@@ -660,7 +654,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680288903190</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="lesson47/1">
+      <created>1680585545361</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1680585545361</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -709,7 +710,8 @@
     <MESSAGE value="lesson 42" />
     <MESSAGE value="spring boot" />
     <MESSAGE value="lesson47" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson47" />
+    <MESSAGE value="lesson47/1" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson47/1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
